@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CJ2MYKK22Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CJ2MYKK22Q');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>수출의 40%가 반도체가 된 날 — 공정한 시선 7호</title>
+<meta name="description" content="工程의 눈으로 읽는 반도체 위클리 7호. 반도체 수출 410억 달러(+179%), 실적 콜의 2027년 답변, 그리고 FMS 2026이 그린 HBM 이후의 지도.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="수출의 40%가 반도체가 된 날 — 공정한 시선 7호">
+<meta property="og:description" content="반도체 수출 410억 달러·비중 40.3%, 2027 협상의 답, HBF·zHBM이 그린 다음 지도 — 工程의 눈으로 읽는 반도체 위클리.">
+<meta property="og:image" content="https://fablens.github.io/weekly/img/og-default.jpg">
+<meta property="og:url" content="https://fablens.github.io/weekly/gongjeong-07.html">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --navy:#152B47; --navy-deep:#0D1D33; --ink:#1C2430; --body:#3A4453;
+  --muted:#7A8494; --line:#E3E7EC; --paper:#FFFFFF; --bg:#F4F6F8;
+  --accent:#C0502D; --accent-soft:#FBF1EC;
+  --policy:#2E6B3A; --policy-soft:#EDF5EF; --policy-line:#BBD6C2;
+  --blue:#2E75B6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Pretendard','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Segoe UI',sans-serif;
+  background:var(--bg); color:var(--body); line-height:1.75; font-size:16.5px;
+  -webkit-font-smoothing:antialiased; word-break:keep-all;}
+
+#gauge{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:100;transition:width .1s linear}
+
+.hero{background:linear-gradient(rgba(13,29,51,.82), rgba(13,29,51,.92)), url('img/hero.jpg') center/cover no-repeat var(--navy-deep);
+  color:#fff; padding:0 24px;}
+.hero-inner{max-width:760px;margin:0 auto;min-height:82vh;display:flex;flex-direction:column;justify-content:center;padding:64px 0 56px}
+.kicker{font-size:12.5px;letter-spacing:.14em;color:#9FB2C9;font-weight:600}
+.hero h1{font-size:clamp(34px,6vw,54px);line-height:1.24;font-weight:800;letter-spacing:-0.02em;margin:24px 0 20px;color:#fff}
+.hero h1 .em{color:#F0A583}
+.hero .deck{font-size:clamp(16px,2.2vw,19px);color:#C3CFDE;line-height:1.8;max-width:620px}
+.hero .meta{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;gap:8px 28px;font-size:13px;color:#8FA3BC}
+.hero .meta b{color:#D8E2EE;font-weight:600}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+section.block{padding:68px 0 8px}
+.sec-title{font-size:clamp(22px,3.4vw,28px);font-weight:800;color:var(--ink);letter-spacing:-0.01em;margin-bottom:8px}
+.sec-desc{font-size:14px;color:var(--muted);margin-bottom:32px}
+
+.three{background:var(--paper);border-top:3px solid var(--accent)}
+.three-item{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:24px 0;align-items:start}
+.three-item + .three-item{border-top:1px solid var(--line)}
+.three-num{font-size:36px;font-weight:800;color:var(--accent);line-height:1;padding-top:4px}
+.three-txt{font-size:clamp(17px,2.4vw,19.5px);font-weight:700;color:var(--ink);line-height:1.6}
+.three-txt small{display:block;font-size:14px;font-weight:400;color:var(--muted);margin-top:6px}
+
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:32px 32px 26px;margin-bottom:24px;box-shadow:0 1px 2px rgba(16,32,54,.04)}
+.card h3{font-size:clamp(19px,2.8vw,22px);font-weight:800;color:var(--ink);line-height:1.45;letter-spacing:-0.01em;margin-bottom:6px}
+.card .takeaway{font-size:15.5px;font-weight:700;color:var(--accent);margin-bottom:15px}
+.card p.facts{font-size:15.5px;color:var(--body);margin-bottom:16px}
+.callout{border-radius:10px;padding:17px 19px;font-size:15.5px;line-height:1.75}
+.callout .lab{font-weight:800;margin-right:6px}
+.callout.biz{background:var(--accent-soft);border-left:4px solid var(--accent)}
+.callout.biz .lab{color:var(--accent)}
+.callout.policy{background:var(--policy-soft);border-left:4px solid var(--policy)}
+.callout.policy .lab{color:var(--policy)}
+.src{font-size:12.5px;color:var(--muted);margin-top:13px}
+.src a{color:var(--blue);text-decoration:none;border-bottom:1px dotted #B9CFE4}
+.lastweek{display:inline-block;font-size:11px;font-weight:700;color:var(--blue);border:1px solid #C9DCEE;background:#F2F7FC;border-radius:99px;padding:2px 10px;margin-left:8px;vertical-align:3px}
+
+.resolved{background:#EDF1F6;border-radius:10px;padding:14px 18px;font-size:14px;color:var(--navy);margin-bottom:16px}
+.resolved b{font-weight:800}
+
+.krow{border-left:4px solid var(--policy);padding:4px 0 4px 22px;margin-bottom:30px}
+.krow h3{font-size:clamp(17px,2.5vw,20px);font-weight:800;color:var(--ink);line-height:1.5;margin-bottom:8px}
+.krow p{font-size:15px;margin-bottom:10px}
+.krow .imp{font-size:15px;line-height:1.75}
+.krow .imp b{color:var(--policy)}
+.krow.biz{border-left-color:var(--accent)}
+.krow.biz .imp b{color:var(--accent)}
+
+.paper-card{border-left:5px solid var(--navy)}
+.timeline{display:flex;align-items:center;gap:0;margin:22px 0 6px;flex-wrap:wrap}
+.tl-node{text-align:center;flex:1;min-width:110px;padding:0 4px}
+.tl-node .yr{font-size:12px;font-weight:700;color:var(--muted)}
+.tl-node .lb{font-size:13.5px;font-weight:700;color:var(--ink);margin-top:2px}
+.tl-node .st{font-size:11.5px;color:var(--muted)}
+.tl-node::before{content:'';display:block;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--navy);margin:0 auto 8px}
+.tl-node.now::before{background:var(--accent);border-color:var(--accent)}
+.tl-bar{height:2px;background:var(--line);flex:0.6;min-width:24px;margin-bottom:52px}
+
+.fabnote{background:linear-gradient(135deg,#1C2E48 0%,#0D1D33 100%);color:#C9D5E4;border-radius:16px;padding:32px 32px 28px}
+.fabnote .fn-lab{font-size:11.5px;font-weight:800;letter-spacing:.18em;color:#F0A583}
+.fabnote h3{color:#fff;font-size:clamp(18px,2.6vw,22px);font-weight:800;margin:12px 0 14px;line-height:1.5}
+.fabnote p{font-size:15px;line-height:1.85}
+.fabnote .fn-tail{margin-top:14px;font-size:12.5px;color:#8FA3BC;font-style:italic}
+.fabnote .fn-img{width:calc(100% + 64px);max-width:none;margin:-32px -32px 22px;border-radius:16px 16px 0 0;display:block}
+@media (max-width:640px){.fabnote .fn-img{width:calc(100% + 40px);margin:-26px -20px 18px;border-radius:12px 12px 0 0}}
+
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.metric{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 18px}
+.metric .m-lab{font-size:12px;font-weight:700;color:var(--muted)}
+.metric .m-val{font-size:clamp(22px,3.4vw,29px);font-weight:800;color:var(--ink);margin:6px 0 2px}
+.metric .m-val.up{color:var(--accent)}
+.metric .m-sub{font-size:11.5px;color:var(--muted);line-height:1.5}
+.metric-note{font-size:12px;color:var(--muted);margin-top:14px}
+
+.cal{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px 26px}
+.cal li{list-style:none;display:grid;grid-template-columns:96px 1fr;gap:16px;padding:13px 0;font-size:15px;align-items:start}
+.cal .d{font-weight:800;color:var(--navy);font-size:13.5px;background:var(--bg);border-radius:8px;text-align:center;padding:6px 4px}
+.cal .d.hot{background:var(--accent-soft);color:var(--accent)}
+
+.ticker li{list-style:none;padding:10px 0;font-size:15px}
+.ticker li b{color:var(--ink);font-size:13.5px;margin-right:8px}
+
+.pull{padding:60px 0}
+.pull blockquote{font-size:clamp(24px,4vw,33px);font-weight:800;line-height:1.5;color:var(--ink);letter-spacing:-0.015em;text-align:center}
+.pull blockquote span{background:linear-gradient(transparent 62%, #F6DACD 62%)}
+.pull .who{text-align:center;font-size:13px;color:var(--muted);margin-top:16px}
+
+.colophon{background:var(--navy-deep);color:#AAB9CC;margin-top:76px;padding:60px 24px 48px}
+.colophon .wrap{max-width:760px}
+.colophon h4{color:#fff;font-size:15px;letter-spacing:.1em;margin-bottom:18px}
+.colophon p{font-size:13.5px;line-height:1.9}
+.colophon .next{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:22px 26px;margin:28px 0}
+.colophon .next .nx-lab{font-size:11.5px;letter-spacing:.18em;color:#F0A583;font-weight:700}
+.colophon .next .nx-title{font-size:19px;font-weight:800;color:#fff;margin-top:8px}
+.colophon .next p{color:#93A5BB;margin-top:6px}
+.colophon .foot{border-top:1px solid rgba(255,255,255,.12);margin-top:32px;padding-top:22px;font-size:12px;color:#6D7F96;display:flex;flex-wrap:wrap;gap:6px 24px}
+details.srcbox{margin-top:24px}
+details.srcbox summary{cursor:pointer;font-size:13px;color:#8FA3BC}
+details.srcbox ul{margin:14px 0 0 2px}
+details.srcbox li{list-style:none;font-size:12.5px;line-height:2}
+details.srcbox a{color:#7FA8D9;text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.reveal-in{opacity:1;transform:none}
+
+@media (max-width:640px){
+  .card{padding:26px 20px 22px}
+  .fabnote{padding:26px 20px 22px}
+  .three-item{grid-template-columns:40px 1fr;gap:12px}
+  .three-num{font-size:28px}
+  .metrics{grid-template-columns:1fr}
+  .cal{padding:8px 16px}
+}
+@media print{
+  #gauge{display:none}
+  .hero-inner{min-height:auto;padding:40px 0}
+  .card{break-inside:avoid;box-shadow:none}
+}
+</style>
+</head>
+<body>
+<div id="gauge"></div>
+
+<!-- ================= 히어로 ================= -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">공정한 시선 · 반도체 위클리 7호</div>
+    <h1>수출의 <span class="em">40%</span>가<br>반도체가 된 날</h1>
+    <p class="deck">7월 한국 수출 989억 달러 중 410억 달러가 반도체였다 — 비중 40.3%, 두 달 연속 400억 돌파. 같은 주, 실적 콜에서는 2027년의 답이 나왔고, FMS 학회에서는 HBM 이후의 메모리 지도가 그려졌다. 오늘의 숫자와 내일의 로드맵을 한 호에 담는다.</p>
+    <div class="meta">
+      <span><b>발행</b> 2026. 8. 10.(월)</span>
+      <span><b>글로벌 신호 확인</b> 2026년 8월 10일 자</span>
+      <span><b>읽는 시간</b> 약 9분</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= 핵심 3줄 ================= -->
+<section class="block three">
+  <div class="wrap">
+    <div class="sec-title">이번 주 핵심 3줄</div>
+    <div class="sec-desc">여기까지만 읽어도 이번 주는 따라갑니다.</div>
+    <div class="three-item reveal"><div class="three-num">1</div><div class="three-txt">7월 반도체 수출 410억 달러(+179%) — 총수출의 40.3%, 두 달 연속 400억 달러 돌파.<small>총수출 989억 달러로 역대 2위 · 무역흑자 303억 달러</small></div></div>
+    <div class="three-item reveal"><div class="three-num">2</div><div class="three-txt">실적 콜의 2027년 답변 — HBM 협상 순조, 빅테크 등 10곳 장기계약, 3분기 매출 "첫 100조" 전망.<small>지난 호 채점표의 '보류' 판정 회수 · HBM4 수율은 HBM3E 수준 근접 (컨콜)</small></div></div>
+    <div class="three-item reveal"><div class="three-num">3</div><div class="three-txt">FMS 2026이 그린 HBM 이후의 지도 — HBF 표준 공개(SK하이닉스·샌디스크), 삼성 zHBM 컨셉.<small>HBF: 최대 512GB·3TB/s, OCP 오픈 표준 · zHBM은 "HBM5의 8배" 주장이나 아직 컨셉</small></div></div>
+  </div>
+</section>
+
+<!-- ================= 글로벌 헤드라인 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">글로벌 헤드라인</div>
+    <div class="sec-desc">사실은 짧게, 해석은 깊게.</div>
+
+    <article class="card reveal">
+      <h3>반도체 수출 410억 달러 — 6호의 질문이 숫자로 확정됐다<span class="lastweek">지난 호 후속</span></h3>
+      <div class="takeaway">◆ 40.3%는 축복의 숫자이자 리스크의 숫자다</div>
+      <p class="facts">산업통상자원부가 발표한 7월 수출은 989억 달러(+62.8%)로 역대 2위였고, 반도체가 410.1억 달러(+178.8%)로 총수출의 40.3%를 차지했다. 반도체 수출 400억 달러 돌파는 두 달 연속이며, 14개월 연속 동월 기준 최대 기록이다. 무역수지는 303.2억 달러 흑자.</p>
+      <div class="callout policy"><span class="lab">정책 시사점</span>지난 호에서 "수출의 반도체 쏠림"을 정책 질문으로 던졌는데, 한 주 만에 40.3%라는 답이 나왔다. 유례없는 호황의 증거이자, 국가 경제의 변동성이 메모리 사이클 하나에 걸리는 구조의 확정이기도 하다. 이 흑자와 세수가 쌓이는 지금이 다변화(시스템반도체·소부장·비반도체 수출) 투자의 적기라는 6호의 논지를 반복한다 — 사이클은 반드시 돌아온다는 것을, 이 브리핑의 7주치 기록만으로도 알 수 있다. <i>(필자 해석)</i></div>
+      <div class="src">출처: <a href="https://www.mt.co.kr/economy/2026/08/01/2026080108143948329" target="_blank" rel="noopener">머니투데이(8.1)</a> · <a href="https://imnews.imbc.com/replay/2026/nw1200/article/6838897_36967.html" target="_blank" rel="noopener">MBC(8.1)</a> · <a href="https://www.sedaily.com/article/20074780" target="_blank" rel="noopener">서울경제</a></div>
+    </article>
+
+    <article class="card reveal">
+      <h3>실적 콜이 내놓은 2027년 — 물량은 보였고, 가격은 비공개 영역에 남았다<span class="lastweek">지난 호 후속</span></h3>
+      <div class="resolved"><b>채점표 회수</b> — 6호에서 '보류'했던 "실적 콜의 2027년 발언" 판정을 이번 주 후속 보도로 회수합니다.</div>
+      <div class="takeaway">◆ 완판 다음의 질문(2027)에 대한 답: 물량 가시성 확보</div>
+      <p class="facts">SK하이닉스 실적 콜 후속 보도를 종합하면 — 2027년 HBM 공급 물량·가격 협상이 "순조롭게 진행 중"이며, 빅테크를 포함한 10곳과 장기계약을 맺고 HBM을 증산한다. 3분기에는 D램 가격 인상과 HBM4 판매 본격화가 동시 반영돼 분기 매출 100조 원 첫 돌파를 회사가 직접 전망했다. HBM4 수율·품질은 HBM3E 수준에 근접했고, HBM4E는 고객 샘플 출하를 마치고 2027년 양산을 준비 중이다. 한국투자증권은 목표주가를 470만 원으로 올렸다.</p>
+      <div class="callout biz"><span class="lab">So what?</span>주목할 발언은 "일반 D램 급등이 HBM 협상에 영향을 줄 수 있다"는 대목이다 — 범용 가격이 HBM 가격의 바닥을 밀어 올리는 전이 구조를 회사가 인정한 것으로, 창간호에서 쓴 '라인 전환의 경제학'이 이제 가격 협상 테이블에서 작동한다는 뜻이다. 다만 개별 계약 조건은 비공개 영역에 남았으므로, 2027년의 실제 가격표는 내년 실적으로만 확인된다. 물량 가시성(10곳 장기계약)과 기술 진척(HBM4 수율)은 확보 — 남은 변수는 가격과 사이클의 수명이다. <i>(필자 해석)</i></div>
+      <div class="src">출처: <a href="https://www.newspim.com/news/view/20260729000286" target="_blank" rel="noopener">뉴스핌 컨콜(7.29)</a> · <a href="https://www.sedaily.com/article/20073479" target="_blank" rel="noopener">서울경제 — 10곳 장기계약·100조</a> · <a href="https://www.ajunews.com/view/20260730085044364" target="_blank" rel="noopener">아주경제 — 한투 470만원(7.30)</a></div>
+    </article>
+
+    <article class="card reveal">
+      <h3>AMD 데이터센터 매출 2배 — AI 수요의 폭이 엔비디아 밖으로 넓어진다</h3>
+      <div class="takeaway">◆ 가속기 다변화는 곧 HBM 고객 다변화다</div>
+      <p class="facts">AMD가 2분기 매출 115억 달러(+50% YoY)를 발표했다 — 데이터센터 부문이 전년 대비 2배 이상 성장하며 견인했다. AI 연결 반도체의 아스테라랩스도 분기 매출 3.9억 달러(+104%)로 기록을 세웠다(주간 브리핑, 보도).</p>
+      <div class="callout biz"><span class="lab">So what?</span>AI 인프라 지출이 특정 1개사 독식에서 생태계 전반으로 번지는 그림이다. 메모리 관점에서 가속기 공급자가 늘어난다는 건 HBM 수요처가 다변화된다는 뜻 — 특정 고객 의존도가 낮아지면 협상력과 물량 안정성이 함께 올라간다. 이번 주 실적 콜의 '10곳 장기계약'(헤드라인 2)과 같은 방향의 신호다.</div>
+      <div class="src">출처: <a href="https://www.distillintelligence.com/briefings/semiconductors-ai-chips-2026-08-07" target="_blank" rel="noopener">주간 브리핑(8.7)</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= 인용 ================= -->
+<div class="pull wrap reveal">
+  <blockquote>"사이클은 반드시 돌아온다 —<br><span>그게 다변화의 마감시한이다</span>"</blockquote>
+  <div class="who">— 이번 주 정책 시사점의 결론</div>
+</div>
+
+<!-- ================= K-레이더 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">K-레이더</div>
+    <div class="sec-desc">한국 생태계의 이번 주 신호들.</div>
+
+    <div class="krow reveal">
+      <h3>무역흑자 303억 달러, 14개월 연속 동월 최대 — 쏠림이 만든 협상력</h3>
+      <p>반도체발 흑자 행진은 세수와 환율만이 아니라 통상 테이블의 지형도 바꾼다 — 수출 상대국들에게 한국 반도체는 '사야만 하는 품목'이 된 상태다.</p>
+      <div class="imp"><b>정책 시사점</b> — 공급자 우위가 확실한 지금이 통상 협상(관세·수출통제 협의)에서 반도체 카드를 가장 비싸게 쓸 수 있는 시기다. 다만 1호부터 추적한 수출통제의 '국적 기준' 흐름이 여전히 진행형이라는 점에서, 카드의 유효기간은 무한하지 않다.</div>
+    </div>
+
+    <div class="krow biz reveal">
+      <h3>목표주가 470만 원의 시대 — 눈높이가 다시 실적을 앞지르기 시작했다</h3>
+      <p>실적 콜 이후 증권가 목표주가가 일제히 올랐다(한투 470만 원 등). 6호에서 확인한 교훈 — '사상 최대'가 안전판이 아니라는 것 — 이 다시 시험대에 오른다.</p>
+      <div class="imp"><b>기업 시사점</b> — 컨센서스가 앞서 뛰는 국면에서는 다음 분기 '3분기 매출 100조' 전망(헤드라인 2)이 새로운 통과선이 된다. 회사가 직접 제시한 숫자인 만큼, 이번엔 미스의 변명이 어렵다 — 4분기 초 실적 시즌을 미리 달력에 표시해 둘 것.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 논문에서 온 신호 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">논문에서 온 신호</div>
+    <div class="sec-desc">한 주 쉬고 돌아왔습니다 — 이번 주는 학회(FMS 2026)가 그린 'HBM 이후의 지도'입니다.</div>
+
+    <article class="card paper-card reveal">
+      <h3>HBM과 SSD 사이의 빈 칸 — HBF 표준 공개, 그리고 zHBM이라는 컨셉</h3>
+      <div class="takeaway">◆ 메모리 계층에 새 칸이 생기면, 새 밸류체인이 생긴다</div>
+      <p class="facts">8월 4~6일 FMS(Future of Memory and Storage) 2026에서 SK하이닉스와 샌디스크가 HBF(High Bandwidth Flash)의 첫 표준 사양을 OCP(오픈컴퓨트프로젝트)를 통해 공개했다 — HBM처럼 적층해 대역폭을 키운 NAND로, 최대 512GB 용량에 0.4~3TB/s 대역폭을 정의한다. AI 추론 워크로드의 용량 병목을 겨냥한 규격이다. 같은 무대에서 삼성전자는 GPU 위에 메모리를 직접 쌓는 zHBM 컨셉을 공개하며 "HBM5의 8배 성능"을 제시했다 — 단, 제품·고객·양산 일정이 없는 컨셉 단계다(보도).</p>
+
+      <div class="timeline" aria-label="HBM 이후 메모리 계층 타임라인">
+        <div class="tl-node"><span class="yr">~2025</span><div class="lb">개념 논의</div><div class="st">추론 병목 부상</div></div>
+        <div class="tl-bar"></div>
+        <div class="tl-node now"><span class="yr">2026 지금</span><div class="lb">HBF 표준 공개</div><div class="st">zHBM은 컨셉</div></div>
+        <div class="tl-bar"></div>
+        <div class="tl-node"><span class="yr">~2028</span><div class="lb">제품화 검증</div><div class="st">생태계 채택 관문</div></div>
+        <div class="tl-bar"></div>
+        <div class="tl-node"><span class="yr">2030 전후</span><div class="lb">계층 정착 여부</div><div class="st">업계 전망</div></div>
+      </div>
+
+      <div class="callout biz"><span class="lab">이것이 의미하는 것</span>학습이 대역폭(HBM)의 싸움이었다면, 추론은 용량의 싸움이다 — 모델을 통째로 메모리 가까이에 두려는 수요가 HBM과 SSD 사이의 빈 칸을 만들었고, HBF는 그 칸의 표준을 선점하려는 시도다. 눈여겨볼 것은 방식의 대비다: SK하이닉스 진영은 오픈 표준(OCP)으로 생태계를 모으는 전략, 삼성은 독자 컨셉(zHBM)으로 성능 우위를 선언하는 전략 — HBM 초기 판세의 데자뷰다. 공정 관점에서 HBF는 NAND 적층과 TSV·본딩(5호 참조)의 결합이라 후공정 밸류체인이 그대로 재활용되고, 컨셉 단계인 zHBM은 8배라는 숫자보다 'GPU 직적층'이라는 방향성만 취하는 게 안전하다. <i>(필자 해석)</i></div>
+      <div class="src">출처: <a href="https://news.skhynix.com/en/hbf-at-fms-2026/" target="_blank" rel="noopener">SK하이닉스 뉴스룸(공식)</a> · <a href="https://www.koreaherald.com/article/10830479" target="_blank" rel="noopener">Korea Herald</a> · <a href="https://www.trendforce.com/news/2026/08/05/news-samsung-expected-to-showcase-zhbm-at-fms-2026-a-next-gen-3d-memory-architecture-with-4x-bandwidth/" target="_blank" rel="noopener">TrendForce(8.5)</a> · <a href="https://videocardz.com/newz/samsung-pitches-zhbm-with-8x-hbm5-performance-but-it-is-still-only-a-concept" target="_blank" rel="noopener">VideoCardz — 컨셉 단계 지적</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= 공정 한 컷 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">공정 한 컷</div>
+    <div class="sec-desc">전직 팹 엔지니어의 시선으로, 매호 용어 하나를 현장의 언어로 풉니다.</div>
+
+    <div class="fabnote reveal">
+      <div class="fn-lab">FAB NOTE · 7호</div>
+      <h3>도마와 냉장고 사이 — 메모리 계층에 새 선반이 생기는 이유</h3>
+      <p>컴퓨터의 메모리는 주방과 같다. 지금 썰고 있는 재료는 도마 위에(HBM — 빠르지만 좁다), 이번 주 장 본 것은 냉장고에(SSD — 넓지만 느리다). 요리가 단순할 땐 이 두 칸이면 충분했다. 그런데 AI 추론이라는 요리는 재료(모델 파라미터)가 냉장고째 필요한데 도마는 손바닥만 하다 — 요리사가 냉장고를 수십 번 오가느라 칼질보다 왕복에 시간을 쓰는 상황, 이것이 지금 데이터센터의 병목이다. FMS에서 공개된 HBF는 도마와 냉장고 사이에 조리대 선반을 놓자는 제안이다: 도마만큼 빠르진 않아도 냉장고보다 훨씬 가깝고, 냉장고만큼은 아니어도 도마의 수십 배를 올려둘 수 있는 칸. 계층이 하나 생기면 그 칸을 채울 소자(적층 NAND), 연결(TSV·본딩), 관리(컨트롤러)의 밸류체인이 통째로 새로 생긴다 — 표준 선점 싸움이 뜨거운 이유다.</p>
+      <div class="fn-tail">— 이 코너는 필자의 공정 경험에 기반한 개념 해설로, 실제 시스템 구조의 세부와 다를 수 있습니다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 이번 주 지표 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">이번 주 지표</div>
+    <div class="sec-desc">시장의 온도를 숫자 세 개로.</div>
+    <div class="metrics reveal">
+      <div class="metric">
+        <div class="m-lab">7월 반도체 수출</div>
+        <div class="m-val up">$410억</div>
+        <div class="m-sub">+178.8% YoY · 두 달 연속 400억 돌파 (산업부, 8.1)</div>
+      </div>
+      <div class="metric">
+        <div class="m-lab">총수출 내 반도체 비중</div>
+        <div class="m-val">40.3%</div>
+        <div class="m-sub">총수출 989억 달러(역대 2위) 기준 — 쏠림의 공식 기록</div>
+      </div>
+      <div class="metric">
+        <div class="m-lab">3분기 매출 전망 (SK하이닉스)</div>
+        <div class="m-val">100조</div>
+        <div class="m-sub">분기 첫 돌파를 회사가 직접 전망 (컨콜, 보도) — 다음 통과선</div>
+      </div>
+    </div>
+    <div class="metric-note">※ 자체 시계열 7주차. SOX 종가는 이번 주 확인값이 없어 싣지 않습니다 — 확인되는 호에서 갱신합니다.</div>
+  </div>
+</section>
+
+<!-- ================= 캘린더 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">이번 주 캘린더</div>
+    <div class="sec-desc">다음 호에서 다루게 될 일정들.</div>
+    <ul class="cal reveal">
+      <li><span class="d">8월 중</span><span>3분기 계약가 타결 수치 보도 — 2호 '+13~18% vs +20%' 논쟁의 결말 (이월, 보도 기준)</span></li>
+      <li><span class="d">8월 중</span><span>용인 클러스터 첫 아파트 분양 결과 — 정주 여건 수요의 첫 실측 (4호 예고, 확인 시 보도)</span></li>
+      <li><span class="d hot">8월 말</span><span>엔비디아 실적 — AI 수요 사이클의 최종 심판자, HBM 수요의 원천 데이터 (보도 기준, 날짜 미정)</span></li>
+      <li><span class="d">8월 말</span><span>잭슨홀 미팅 — 금리 경로가 밸류에이션 논쟁(6호 참조)의 배경 변수 (보도 기준)</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 한 줄 동향 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">한 줄 동향</div>
+    <div class="sec-desc">나머지 신호들, 한 줄씩만.</div>
+    <ul class="ticker reveal">
+      <li><b>메모리 부족</b>AI 메모리 부족이 2년 차에 진입 — 마이크론 다음 분기 매출 가이던스 약 500억 달러 (보도).</li>
+      <li><b>연결 반도체</b>아스테라랩스 분기 매출 +104% — AI 클러스터의 '배선'까지 슈퍼사이클 (보도).</li>
+      <li><b>표준 경쟁</b>HBF는 오픈 표준, zHBM은 독자 컨셉 — HBM 초기 판세의 데자뷰 (논문 신호 참조).</li>
+      <li><b>다음 학회</b>IEDM(12월) 논문 채택 시즌이 다가온다 — 하반기 '논문에서 온 신호'의 주 무대 예고.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 콜로폰 ================= -->
+<footer class="colophon">
+  <div class="wrap">
+    <h4>ABOUT THIS BRIEF</h4>
+    <p>「공정한 시선」은 반도체 공정 개발 현장을 거친 필자가 발행하는 주간 브리핑입니다. 글로벌 반도체 뉴스를 나열하는 대신 공정·소재의 눈(工程)으로 '왜'를 해설하고, 기업의 판단과 정책의 판단에 각각 필요한 시사점으로 번역하며(公正), 학회·논문에서 뉴스보다 2~3년 빠른 신호를 발굴합니다. 본 호는 발행일 기준 공개 뉴스·학회 발표·시장조사 자료의 교차 확인으로 제작되었습니다. (보도)·(추정) 표기 수치는 2차 보도 기반으로 원 자료 확인 전이며, '필자 해석'은 공개 정보에 대한 개인 견해입니다. 본 브리핑은 투자 권유가 아닙니다.</p>
+
+    <div class="next">
+      <div class="nx-lab">NEXT ISSUE — 다음 주 예고</div>
+      <div class="nx-title">3분기 가격표의 결말, 그리고 엔비디아 주간의 개막</div>
+      <p>2호부터 추적한 계약가 논쟁의 마지막 조각 — 그리고 8월 말, 사이클의 최종 심판자가 등판합니다.</p>
+    </div>
+
+    <details class="srcbox">
+      <summary>전체 출처 목록 펼치기 (12건)</summary>
+      <ul>
+        <li><a href="https://www.mt.co.kr/economy/2026/08/01/2026080108143948329" target="_blank" rel="noopener">7월 수출 989억·반도체 +179% — 머니투데이(8.1)</a></li>
+        <li><a href="https://imnews.imbc.com/replay/2026/nw1200/article/6838897_36967.html" target="_blank" rel="noopener">반도체 비중 40% — MBC(8.1)</a></li>
+        <li><a href="https://www.sedaily.com/article/20074780" target="_blank" rel="noopener">두 달 연속 400억 돌파 — 서울경제</a></li>
+        <li><a href="https://www.newspim.com/news/view/20260729000286" target="_blank" rel="noopener">컨콜: HBM4 본격화 — 뉴스핌(7.29)</a></li>
+        <li><a href="https://www.ajunews.com/view/20260729102002537" target="_blank" rel="noopener">컨콜: HBM 협상 순조 — 아주경제(7.29)</a></li>
+        <li><a href="https://www.sedaily.com/article/20073479" target="_blank" rel="noopener">10곳 장기계약·3Q 100조 — 서울경제</a></li>
+        <li><a href="https://www.ajunews.com/view/20260730085044364" target="_blank" rel="noopener">한투 목표가 470만원 — 아주경제(7.30)</a></li>
+        <li><a href="https://news.skhynix.com/en/hbf-at-fms-2026/" target="_blank" rel="noopener">HBF 표준 공개 — SK하이닉스 뉴스룸(공식)</a></li>
+        <li><a href="https://www.koreaherald.com/article/10830479" target="_blank" rel="noopener">HBF 첫 표준 — Korea Herald</a></li>
+        <li><a href="https://www.trendforce.com/news/2026/08/05/news-samsung-expected-to-showcase-zhbm-at-fms-2026-a-next-gen-3d-memory-architecture-with-4x-bandwidth/" target="_blank" rel="noopener">삼성 zHBM — TrendForce(8.5)</a></li>
+        <li><a href="https://videocardz.com/newz/samsung-pitches-zhbm-with-8x-hbm5-performance-but-it-is-still-only-a-concept" target="_blank" rel="noopener">zHBM은 컨셉 — VideoCardz</a></li>
+        <li><a href="https://www.distillintelligence.com/briefings/semiconductors-ai-chips-2026-08-07" target="_blank" rel="noopener">AMD·아스테라랩스 실적 — 주간 브리핑(8.7)</a></li>
+      </ul>
+    </details>
+
+    <div class="foot">
+      <span>공정한 시선 7호</span>
+      <span>발행인: (이름) · 구독: (뉴스레터 주소)</span>
+      <span>발행 2026. 8. 10. · 글로벌 신호 확인 2026년 8월 10일 자</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const gauge = document.getElementById('gauge');
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const p = h.scrollTop / (h.scrollHeight - h.clientHeight);
+  gauge.style.width = (p * 100).toFixed(2) + '%';
+}, {passive:true});
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('reveal-in'); io.unobserve(e.target); } });
+}, {threshold: 0.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CJ2MYKK22Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CJ2MYKK22Q');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>채점이 끝났다, 시험은 계속된다 — 공정한 시선 6호</title>
+<meta name="description" content="工程의 눈으로 읽는 반도체 위클리 6호. SK하이닉스 60.5조의 명암, 삼성 세트 첫 적자, 빅테크 CapEx 검증 완료 — 지난 호 관전 포인트를 채점합니다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="채점이 끝났다, 시험은 계속된다 — 공정한 시선 6호">
+<meta property="og:description" content="SK하이닉스 60.5조의 명암, 삼성 세트 첫 적자, SOX +8.2% — 지난 호 관전 포인트 채점표까지. 工程의 눈으로 읽는 반도체 위클리.">
+<meta property="og:image" content="https://fablens.github.io/weekly/img/og-default.jpg">
+<meta property="og:url" content="https://fablens.github.io/weekly/gongjeong-06.html">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --navy:#152B47; --navy-deep:#0D1D33; --ink:#1C2430; --body:#3A4453;
+  --muted:#7A8494; --line:#E3E7EC; --paper:#FFFFFF; --bg:#F4F6F8;
+  --accent:#C0502D; --accent-soft:#FBF1EC;
+  --policy:#2E6B3A; --policy-soft:#EDF5EF; --policy-line:#BBD6C2;
+  --blue:#2E75B6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Pretendard','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Segoe UI',sans-serif;
+  background:var(--bg); color:var(--body); line-height:1.75; font-size:16.5px;
+  -webkit-font-smoothing:antialiased; word-break:keep-all;}
+
+#gauge{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:100;transition:width .1s linear}
+
+.hero{background:linear-gradient(rgba(13,29,51,.82), rgba(13,29,51,.92)), url('img/hero.jpg') center/cover no-repeat var(--navy-deep);
+  color:#fff; padding:0 24px;}
+.hero-inner{max-width:760px;margin:0 auto;min-height:82vh;display:flex;flex-direction:column;justify-content:center;padding:64px 0 56px}
+.kicker{font-size:12.5px;letter-spacing:.14em;color:#9FB2C9;font-weight:600}
+.hero h1{font-size:clamp(34px,6vw,54px);line-height:1.24;font-weight:800;letter-spacing:-0.02em;margin:24px 0 20px;color:#fff}
+.hero h1 .em{color:#F0A583}
+.hero .deck{font-size:clamp(16px,2.2vw,19px);color:#C3CFDE;line-height:1.8;max-width:620px}
+.hero .meta{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;gap:8px 28px;font-size:13px;color:#8FA3BC}
+.hero .meta b{color:#D8E2EE;font-weight:600}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+section.block{padding:68px 0 8px}
+.sec-title{font-size:clamp(22px,3.4vw,28px);font-weight:800;color:var(--ink);letter-spacing:-0.01em;margin-bottom:8px}
+.sec-desc{font-size:14px;color:var(--muted);margin-bottom:32px}
+
+/* 핵심 3줄 */
+.three{background:var(--paper);border-top:3px solid var(--accent)}
+.three-item{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:24px 0;align-items:start}
+.three-item + .three-item{border-top:1px solid var(--line)}
+.three-num{font-size:36px;font-weight:800;color:var(--accent);line-height:1;padding-top:4px}
+.three-txt{font-size:clamp(17px,2.4vw,19.5px);font-weight:700;color:var(--ink);line-height:1.6}
+.three-txt small{display:block;font-size:14px;font-weight:400;color:var(--muted);margin-top:6px}
+
+/* 헤드라인 카드 (패밀리 A) */
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:32px 32px 26px;margin-bottom:24px;box-shadow:0 1px 2px rgba(16,32,54,.04)}
+.card h3{font-size:clamp(19px,2.8vw,22px);font-weight:800;color:var(--ink);line-height:1.45;letter-spacing:-0.01em;margin-bottom:6px}
+.card .takeaway{font-size:15.5px;font-weight:700;color:var(--accent);margin-bottom:15px}
+.card p.facts{font-size:15.5px;color:var(--body);margin-bottom:16px}
+.callout{border-radius:10px;padding:17px 19px;font-size:15.5px;line-height:1.75}
+.callout .lab{font-weight:800;margin-right:6px}
+.callout.biz{background:var(--accent-soft);border-left:4px solid var(--accent)}
+.callout.biz .lab{color:var(--accent)}
+.callout.policy{background:var(--policy-soft);border-left:4px solid var(--policy)}
+.callout.policy .lab{color:var(--policy)}
+.src{font-size:12.5px;color:var(--muted);margin-top:13px}
+.src a{color:var(--blue);text-decoration:none;border-bottom:1px dotted #B9CFE4}
+.lastweek{display:inline-block;font-size:11px;font-weight:700;color:var(--blue);border:1px solid #C9DCEE;background:#F2F7FC;border-radius:99px;padding:2px 10px;margin-left:8px;vertical-align:3px}
+
+/* 채점표 (패밀리 B — 이번 호 시그니처) */
+.score{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.score-row{display:grid;grid-template-columns:92px 1fr;gap:0;padding:22px 26px;align-items:start}
+.score-row + .score-row{border-top:1px solid var(--line)}
+.verdict{font-size:13px;font-weight:800;border-radius:8px;text-align:center;padding:7px 4px;margin-right:8px}
+.verdict.hit{background:var(--policy-soft);color:var(--policy)}
+.verdict.miss{background:var(--accent-soft);color:var(--accent)}
+.verdict.half{background:#EDF1F6;color:var(--navy)}
+.verdict.hold{background:#F0F2F4;color:var(--muted)}
+.score-q{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.score-a{font-size:14.5px;color:var(--body);line-height:1.7}
+
+/* 국내 파장 (패밀리 C — 보더 행) */
+.krow{border-left:4px solid var(--policy);padding:4px 0 4px 22px;margin-bottom:30px}
+.krow h3{font-size:clamp(17px,2.5vw,20px);font-weight:800;color:var(--ink);line-height:1.5;margin-bottom:8px}
+.krow p{font-size:15px;margin-bottom:10px}
+.krow .imp{font-size:15px;line-height:1.75}
+.krow .imp b{color:var(--policy)}
+.krow.biz{border-left-color:var(--accent)}
+.krow.biz .imp b{color:var(--accent)}
+
+/* 공정 한 컷 (패밀리 D) */
+.fabnote{background:linear-gradient(135deg,#1C2E48 0%,#0D1D33 100%);color:#C9D5E4;border-radius:16px;padding:32px 32px 28px}
+.fabnote .fn-lab{font-size:11.5px;font-weight:800;letter-spacing:.18em;color:#F0A583}
+.fabnote h3{color:#fff;font-size:clamp(18px,2.6vw,22px);font-weight:800;margin:12px 0 14px;line-height:1.5}
+.fabnote p{font-size:15px;line-height:1.85}
+.fabnote .fn-tail{margin-top:14px;font-size:12.5px;color:#8FA3BC;font-style:italic}
+.fabnote .fn-img{width:calc(100% + 64px);max-width:none;margin:-32px -32px 22px;border-radius:16px 16px 0 0;display:block}
+@media (max-width:640px){.fabnote .fn-img{width:calc(100% + 40px);margin:-26px -20px 18px;border-radius:12px 12px 0 0}}
+
+/* 지표 (패밀리 E) */
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.metric{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 18px}
+.metric .m-lab{font-size:12px;font-weight:700;color:var(--muted)}
+.metric .m-val{font-size:clamp(22px,3.4vw,29px);font-weight:800;color:var(--ink);margin:6px 0 2px}
+.metric .m-val.up{color:var(--accent)}
+.metric .m-val.down{color:var(--blue)}
+.metric .m-sub{font-size:11.5px;color:var(--muted);line-height:1.5}
+.metric-note{font-size:12px;color:var(--muted);margin-top:14px}
+
+/* 캘린더 (패밀리 F — 클러스터 구분) */
+.cal{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px 26px}
+.cal li{list-style:none;display:grid;grid-template-columns:96px 1fr;gap:16px;padding:13px 0;font-size:15px;align-items:start}
+.cal .d{font-weight:800;color:var(--navy);font-size:13.5px;background:var(--bg);border-radius:8px;text-align:center;padding:6px 4px}
+.cal .d.hot{background:var(--accent-soft);color:var(--accent)}
+
+/* 한 줄 동향 (패밀리 G) */
+.ticker{columns:1}
+.ticker li{list-style:none;padding:10px 0;font-size:15px}
+.ticker li b{color:var(--ink);font-size:13.5px;margin-right:8px}
+
+/* 인용 */
+.pull{padding:60px 0}
+.pull blockquote{font-size:clamp(24px,4vw,33px);font-weight:800;line-height:1.5;color:var(--ink);letter-spacing:-0.015em;text-align:center}
+.pull blockquote span{background:linear-gradient(transparent 62%, #F6DACD 62%)}
+.pull .who{text-align:center;font-size:13px;color:var(--muted);margin-top:16px}
+
+/* 콜로폰 */
+.colophon{background:var(--navy-deep);color:#AAB9CC;margin-top:76px;padding:60px 24px 48px}
+.colophon .wrap{max-width:760px}
+.colophon h4{color:#fff;font-size:15px;letter-spacing:.1em;margin-bottom:18px}
+.colophon p{font-size:13.5px;line-height:1.9}
+.colophon .next{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:22px 26px;margin:28px 0}
+.colophon .next .nx-lab{font-size:11.5px;letter-spacing:.18em;color:#F0A583;font-weight:700}
+.colophon .next .nx-title{font-size:19px;font-weight:800;color:#fff;margin-top:8px}
+.colophon .next p{color:#93A5BB;margin-top:6px}
+.colophon .foot{border-top:1px solid rgba(255,255,255,.12);margin-top:32px;padding-top:22px;font-size:12px;color:#6D7F96;display:flex;flex-wrap:wrap;gap:6px 24px}
+details.srcbox{margin-top:24px}
+details.srcbox summary{cursor:pointer;font-size:13px;color:#8FA3BC}
+details.srcbox ul{margin:14px 0 0 2px}
+details.srcbox li{list-style:none;font-size:12.5px;line-height:2}
+details.srcbox a{color:#7FA8D9;text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.reveal-in{opacity:1;transform:none}
+
+@media (max-width:640px){
+  .card{padding:26px 20px 22px}
+  .fabnote{padding:26px 20px 22px}
+  .three-item{grid-template-columns:40px 1fr;gap:12px}
+  .three-num{font-size:28px}
+  .metrics{grid-template-columns:1fr}
+  .score-row{grid-template-columns:78px 1fr;padding:18px 16px}
+  .cal{padding:8px 16px}
+}
+@media print{
+  #gauge{display:none}
+  .hero-inner{min-height:auto;padding:40px 0}
+  .card{break-inside:avoid;box-shadow:none}
+}
+</style>
+</head>
+<body>
+<div id="gauge"></div>
+
+<!-- ================= 히어로 ================= -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">공정한 시선 · 반도체 위클리 6호</div>
+    <h1><span class="em">채점</span>이 끝났다,<br>시험은 계속된다</h1>
+    <p class="deck">SK하이닉스 60.5조 — 사상 최대이면서 컨센서스 하회. 삼성 반도체 89.2조 — 그리고 완제품의 첫 적자. 빅테크는 CapEx를 올렸고 SOX는 하루 +8.2% 뛰었다. 5주간 쌓인 질문들의 답안지가 한 주에 쏟아졌다. 지난 호 관전 포인트를 그대로 채점한다.</p>
+    <div class="meta">
+      <span><b>발행</b> 2026. 8. 3.(월)</span>
+      <span><b>글로벌 신호 확인</b> 2026년 8월 3일 자</span>
+      <span><b>읽는 시간</b> 약 9분</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= 핵심 3줄 ================= -->
+<section class="block three">
+  <div class="wrap">
+    <div class="sec-title">이번 주 핵심 3줄</div>
+    <div class="sec-desc">여기까지만 읽어도 이번 주는 따라갑니다.</div>
+    <div class="three-item reveal"><div class="three-num">1</div><div class="three-txt">SK하이닉스 2분기 영업이익 60.5조 원 — 사상 최대·이익률 76%, 그러나 컨센서스(64조)는 하회.<small>3주 전 폭락을 부른 '하회 전망'이 결과적으로 옳았다 · 상반기 영업이익 98조</small></div></div>
+    <div class="three-item reveal"><div class="three-num">2</div><div class="three-txt">삼성 확정실적 — 반도체(DS) 영업이익 89.2조 vs 완제품(DX) 8,000억 적자.<small>메모리 가격의 양면이 한 회사 손익계산서 안에서 갈렸다 · 완제품 부문 첫 적자 (보도)</small></div></div>
+    <div class="three-item reveal"><div class="three-num">3</div><div class="three-txt">빅테크 CapEx 검증 통과 — 아마존 연 $180~190B로 상향, SOX 하루 +8.2% (15개월 최대 랠리).<small>MS +16%(Azure 서프라이즈) · 마이크론 +18.4% · 단 메타는 마진 급락으로 하락</small></div></div>
+  </div>
+</section>
+
+<!-- ================= 글로벌 헤드라인 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">글로벌 헤드라인</div>
+    <div class="sec-desc">사실은 짧게, 해석은 깊게.</div>
+
+    <article class="card reveal">
+      <h3>60.5조의 명암 — 사상 최대와 컨센 하회는 공존한다<span class="lastweek">지난 호 후속</span></h3>
+      <div class="takeaway">◆ 슈퍼사이클 후반부의 신호: 실적보다 눈높이가 빨리 오른다</div>
+      <p class="facts">SK하이닉스가 29일 2분기 매출 79.3조 원, 영업이익 60.5조 원(전년 대비 +557%)을 발표했다. 분기 사상 최대이고 영업이익률은 76%로 전 분기(72%)보다 높아졌지만, 컨센서스(약 64조 원)는 5% 이상 밑돌았다. HBM·AI 서버용 D램·eSSD 등 고부가 제품 중심 판매를 수익성의 배경으로 설명했다. 상반기 누적으로는 매출 131조, 영업이익 98조에 육박한다.</p>
+      <div class="callout biz"><span class="lab">So what?</span>3주 전 원주 -15% 폭락을 '과민 반응'으로 볼지 '선반영'으로 볼지의 논쟁(4·5호 참조)은 후자의 승리로 끝났다 — 하회 전망은 맞았다. 그러나 내용을 뜯어보면 악재가 아니다: 이익률 76%는 지난 호 공정 한 컷에서 쓴 '다 갚은 집의 월세' 구조가 정점에서 작동 중이라는 뜻이고, 미스의 크기(-5%)는 성장의 크기(+557%)에 비해 작다. 진짜 교훈은 따로 있다 — 컨센서스가 분기마다 앞질러 뛰는 지금 같은 국면에선, '사상 최대'가 더는 주가의 안전판이 아니라는 것. <i>(필자 해석)</i></div>
+      <div class="src">출처: <a href="https://biz.heraldcorp.com/article/10823749" target="_blank" rel="noopener">헤럴드경제(7.29)</a> · <a href="https://www.hankookilbo.com/news/article/A2026072906270004345" target="_blank" rel="noopener">한국일보(7.29)</a></div>
+    </article>
+
+    <article class="card reveal">
+      <h3>삼성의 두 얼굴 — 반도체 89.2조, 완제품은 첫 적자<span class="lastweek">지난 호 후속</span></h3>
+      <div class="takeaway">◆ 창간호부터 추적한 '세트 원가 압박'이 종착지에 도착했다</div>
+      <p class="facts">삼성전자 확정실적에서 사업부별 구성이 공개됐다 — 전사 매출 171.5조·영업이익 89.5조 중 반도체(DS) 부문이 매출 127.5조, 영업이익 89.2조로 사실상 전부를 벌었다. 반면 모바일·가전 등 완제품(DX) 부문은 매출 48조에 8,000억 원 영업손실을 기록했다(보도 기준 부문 첫 적자).</p>
+      <div class="callout biz"><span class="lab">So what?</span>창간호부터 쓴 '메모리 인상 → 세트 원가 압박' 경로가 극단까지 갔다 — 세계에서 메모리를 가장 싸게 조달할 수 있는 회사의 세트 부문마저 적자가 났다면, 메모리를 사서 쓰는 모든 세트 업체의 하반기는 더 어렵다는 뜻이다. 예상되는 파장은 두 갈래: 스마트폰·PC 소비자 가격의 추가 인상, 그리고 세트 업체들의 메모리 탑재량 축소 설계(스펙 다운) 압력. 후자가 현실화되면 내년 수요의 변수가 된다. <i>(필자 해석)</i></div>
+      <div class="src">출처: <a href="https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-2026%EB%85%84-2%EB%B6%84%EA%B8%B0-%EC%8B%A4%EC%A0%81-%EB%B0%9C%ED%91%9C" target="_blank" rel="noopener">삼성전자 뉴스룸(공식)</a> · <a href="https://www.hankookilbo.com/news/article/A2026073007380001275" target="_blank" rel="noopener">한국일보(7.30)</a> · <a href="https://biz.newdaily.co.kr/site/data/html/2026/07/30/2026073000048.html" target="_blank" rel="noopener">뉴데일리</a></div>
+    </article>
+
+    <article class="card reveal">
+      <h3>CapEx 검증 통과 — SOX 하루 +8.2%, 15개월 만의 최대 랠리<span class="lastweek">지난 호 후속</span></h3>
+      <div class="takeaway">◆ 반등의 논리가 실적으로 확인됐다 — 단, 메타가 남긴 각주 하나</div>
+      <p class="facts">지난 호에서 '검증 전 기대'라 했던 빅테크 CapEx가 실적으로 확인됐다. 아마존은 2026년 CapEx 가이던스를 $180~190B로 올렸고, 메타는 하단을 $125B→$130B로 상향($130~145B), MS는 Azure 서프라이즈에 주가가 +16% 뛰었다. 30일 SOX는 하루 +8.2% — 15개월 만의 최대 상승으로, 마이크론은 +18.4% 급등했다. 다만 메타는 CapEx를 올리고도 순이익 -14%, 영업마진 43%→31% 급락에 주가가 하락했다.</p>
+      <div class="callout biz"><span class="lab">So what?</span>4호 약세장 진입 → 5호 반등 → 이번 주 랠리로, 7월 한 달의 조정 사이클이 '기대의 소화'였다는 해석이 사실상 확정됐다. 반도체 공급자 입장에서 $725B(5호 참조)의 지출 계획이 가이던스로 굳어진 것은 2027년 수요 가시성의 확보다. 남은 각주는 메타다 — AI 지출이 이익을 눈에 띄게 잠식한 첫 대형 사례로, 'CapEx의 회수 가능성' 논쟁은 끝난 게 아니라 다음 분기로 이월됐다. <i>(필자 해석)</i></div>
+      <div class="src">출처: <a href="https://finance.biggo.com/news/41a3cf6d-b02e-4d91-ba2b-398d59b8a4ae" target="_blank" rel="noopener">SOX +8.2% (7.30)</a> · <a href="https://moneymorning.com/2026/07/30/magnificent-7-weekly-report-july-30-2026" target="_blank" rel="noopener">Mag7 Weekly</a> · <a href="https://www.fool.com/investing/breakfast-news/2026/07/30/breakfast-news-ai-spend-splits-meta-and-microsoft/" target="_blank" rel="noopener">Motley Fool(7.30)</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= 인용 ================= -->
+<div class="pull wrap reveal">
+  <blockquote>"'사상 최대'는 더 이상<br><span>주가의 안전판이 아니다</span>"</blockquote>
+  <div class="who">— 이번 주 글로벌 헤드라인의 결론</div>
+</div>
+
+<!-- ================= 채점표 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">지난 호 관전 포인트 채점표</div>
+    <div class="sec-desc">5호에서 "수요일에 답이 나온다"고 썼던 질문들 — 그대로 채점합니다.</div>
+    <div class="score reveal">
+      <div class="score-row">
+        <span class="verdict miss">빗나감</span>
+        <div>
+          <div class="score-q">"실적이 컨센서스 64조를 지키는가"</div>
+          <div class="score-a">60.5조로 5% 이상 하회 — 3주 전 '하회 전망'이 옳았다. 단 사상 최대·이익률 76%였으므로 '하회'와 '부진'은 다른 말이다 (헤드라인 1 참조).</div>
+        </div>
+      </div>
+      <div class="score-row">
+        <span class="verdict hit">적중</span>
+        <div>
+          <div class="score-q">"빅테크 CapEx 가이던스가 반등 논리를 검증하는가"</div>
+          <div class="score-a">아마존 상향($180~190B)·메타 하단 상향·MS 서프라이즈 — 검증 통과. SOX +8.2%로 시장이 답했다 (헤드라인 3 참조).</div>
+        </div>
+      </div>
+      <div class="score-row">
+        <span class="verdict half">절반</span>
+        <div>
+          <div class="score-q">"양방향 전환이 26% 프리미엄을 빠르게 좁히는가"</div>
+          <div class="score-a">전환은 29일 개시됐지만, 전환 가능 물량이 발행주식의 2.5%(신주분)에 그쳐 "괴리는 쉽게 안 좁혀진다"는 분석이 우세(보도). 프리미엄 해소는 이벤트가 아니라 과정이 됐다.</div>
+        </div>
+      </div>
+      <div class="score-row">
+        <span class="verdict hold">보류</span>
+        <div>
+          <div class="score-q">"실적 콜의 2027년 물량·가격 발언"</div>
+          <div class="score-a">콜 세부 내용의 교차 확인이 아직 부족해 판정을 미룬다 — 다음 호에서 후속 보도를 모아 정리한다. (지어내지 않는 것이 이 브리핑의 원칙입니다.)</div>
+        </div>
+      </div>
+    </div>
+    <div class="src" style="margin-top:14px">출처: <a href="https://www.mt.co.kr/stock/2026/07/28/2026072817304086600" target="_blank" rel="noopener">머니투데이(7.28)</a> · <a href="https://www.sedaily.com/article/20069178" target="_blank" rel="noopener">서울경제 — 전환 물량 2.5%</a></div>
+  </div>
+</section>
+
+<!-- ================= 국내 파장 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">K-레이더 — 실적 주간의 국내 파장</div>
+    <div class="sec-desc">이번 주 레이더는 실적이 국내 생태계에 남긴 것들을 짚습니다.</div>
+
+    <div class="krow biz reveal">
+      <h3>상반기 두 회사 영업이익 약 190조 — 하반기 CapEx의 실탄이 쌓였다</h3>
+      <p>삼성 DS 89.2조(2분기)와 SK하이닉스 상반기 98조가 말하는 것: 3호에서 쓴 'CapEx 전쟁의 실탄'이 실제 장전됐다.</p>
+      <div class="imp"><b>기업 시사점</b> — 용인 2027·2029 가동 시간표(5호 참조)와 이 현금 흐름이 만나면, 하반기 장비 발주는 상반기보다 커질 공산이 크다. 소부장의 수주 잔고와 증설 공시가 다음 분기 선행지표다.</div>
+    </div>
+
+    <div class="krow reveal">
+      <h3>완제품 적자가 던지는 정책 질문 — 수출 구조의 반도체 쏠림</h3>
+      <p>전사 이익의 사실상 100%가 반도체에서 나오는 구조(헤드라인 2)는 기업만의 문제가 아니다 — 한국 수출과 세수의 반도체 의존도가 같은 방향으로 깊어진다.</p>
+      <div class="imp"><b>정책 시사점</b> — 슈퍼사이클의 세수 호조가 계속될 때가 산업 포트폴리오 다변화(시스템반도체·소부장 자립)에 투자할 적기다. 사이클이 꺾인 뒤에는 같은 정책도 몇 배 비싸진다. 8월 1일 발표된 7월 수출 통계의 반도체 비중을 다음 호에서 확인한다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 공정 한 컷 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">공정 한 컷</div>
+    <div class="sec-desc">전직 팹 엔지니어의 시선으로, 매호 용어 하나를 현장의 언어로 풉니다.</div>
+
+    <div class="fabnote reveal">
+      <div class="fn-lab">FAB NOTE · 6호</div>
+      <h3>비트 그로스 — 실적 미스의 범인은 대개 가격이 아니라 '비트'다</h3>
+      <p>메모리 매출은 결국 두 숫자의 곱이다: 비트당 가격 × 출하 비트. 가격은 시장이 정하지만, 비트는 팹이 깎아 만든다 — 같은 웨이퍼에서 더 많은 비트를 뽑는 방법은 미세화(다이를 작게), 적층(더 높이), 수율(버리는 걸 줄이기) 세 가지뿐이고, 셋 다 공정의 영역이다. 그래서 '사상 최대인데 컨센 하회'(헤드라인 1) 같은 결과가 나오면 현장 출신은 가격보다 비트 쪽을 먼저 의심한다. HBM처럼 공정이 까다로운 제품으로 믹스를 옮기면 이익률은 오르지만 출하 비트 증가는 둔해진다 — 이익률 76%와 매출 컨센 하회가 동시에 나타나는 조합은 정확히 그 그림이다. 애널리스트의 스프레드시트에서 '비트 그로스 가정' 한 칸이 틀어지면 컨센서스 몇 조가 움직인다. 실적 시즌에 기사 제목만 보지 말고 비트 이야기를 찾아 읽어야 하는 이유다.</p>
+      <div class="fn-tail">— 이 코너는 필자의 공정 경험에 기반한 개념 해설로, 특정 기업의 실적 요인 분석과 다를 수 있습니다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 이번 주 지표 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">이번 주 지표</div>
+    <div class="sec-desc">시장의 온도를 숫자 세 개로.</div>
+    <div class="metrics reveal">
+      <div class="metric">
+        <div class="m-lab">SK하이닉스 2Q 영업이익</div>
+        <div class="m-val">60.5조</div>
+        <div class="m-sub">사상 최대, 컨센(64조) 대비 약 -5% · 이익률 76% (전분기 72%)</div>
+      </div>
+      <div class="metric">
+        <div class="m-lab">삼성 DS 부문 영업이익</div>
+        <div class="m-val">89.2조</div>
+        <div class="m-sub">전사 89.5조의 사실상 전부 — 완제품 부문은 -0.8조 (보도)</div>
+      </div>
+      <div class="metric">
+        <div class="m-lab">SOX 하루 상승 (7/30)</div>
+        <div class="m-val up">+8.2%</div>
+        <div class="m-sub">15개월 최대 랠리 — 전주(5호) '반등 검증 대기'의 답</div>
+      </div>
+    </div>
+    <div class="metric-note">※ 자체 시계열 6주차 — 4호 SOX 11,674(약세장) → 5호 반등 → 이번 주 +8.2% 랠리로 사이클 한 바퀴가 기록됐습니다.</div>
+  </div>
+</section>
+
+<!-- ================= 캘린더 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">이번 주 캘린더</div>
+    <div class="sec-desc">다음 호에서 다루게 될 일정들.</div>
+    <ul class="cal reveal">
+      <li><span class="d">8월 1주</span><span>7월 수출 통계 반도체 비중 확인 — K-레이더의 숙제 (통계는 8/1 발표)</span></li>
+      <li><span class="d">8월 초</span><span>3분기 계약가 협상 타결 보도 — 2호 '+13~18% vs +20%' 논쟁의 결말 (보도 기준, 변동 가능)</span></li>
+      <li><span class="d">8월 초</span><span>용인 클러스터 첫 아파트 분양 (4호 예고)</span></li>
+      <li><span class="d hot">8월 말</span><span>엔비디아 실적 — AI 수요 사이클의 최종 심판자 (보도 기준, 날짜 미정)</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 한 줄 동향 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">한 줄 동향</div>
+    <div class="sec-desc">나머지 신호들, 한 줄씩만.</div>
+    <ul class="ticker reveal">
+      <li><b>메모리</b>마이크론 +18.4%, 샌디스크 +26% — 랠리의 최대 수혜는 메모리 체인 (7.30, 보도).</li>
+      <li><b>클라우드</b>MS Azure 서프라이즈에 주가 +16% — AI 지출이 매출로 돌아오는 쪽과 아닌 쪽(메타)의 분화.</li>
+      <li><b>ADR</b>SKHY 전환 개시 — "프리미엄은 이벤트가 아니라 과정" (채점표 참조).</li>
+      <li><b>다음 신호</b>'논문에서 온 신호'는 결산 특집으로 한 주 쉽니다 — 다음 호에 IEDM 프리뷰 시즌과 함께 돌아옵니다.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 콜로폰 ================= -->
+<footer class="colophon">
+  <div class="wrap">
+    <h4>ABOUT THIS BRIEF</h4>
+    <p>「공정한 시선」은 반도체 공정 개발 현장을 거친 필자가 발행하는 주간 브리핑입니다. 글로벌 반도체 뉴스를 나열하는 대신 공정·소재의 눈(工程)으로 '왜'를 해설하고, 기업의 판단과 정책의 판단에 각각 필요한 시사점으로 번역하며(公正), 학회·논문에서 뉴스보다 2~3년 빠른 신호를 발굴합니다. 본 호는 실적 결산 특집으로 '지난 호 관전 포인트 채점표'를 두었고, '논문에서 온 신호'는 한 주 쉽니다. (보도)·(추정) 표기 수치는 2차 보도 기반으로 원 자료 확인 전이며, '필자 해석'은 공개 정보에 대한 개인 견해입니다. 본 브리핑은 투자 권유가 아닙니다.</p>
+
+    <div class="next">
+      <div class="nx-lab">NEXT ISSUE — 다음 주 예고</div>
+      <div class="nx-title">3분기 가격표와 7월 수출 성적표 — 그리고 보류된 판정들</div>
+      <p>계약가 협상의 결말, 수출 통계의 반도체 비중, 그리고 채점표에서 미룬 2027년 이야기까지 회수합니다.</p>
+    </div>
+
+    <details class="srcbox">
+      <summary>전체 출처 목록 펼치기 (11건)</summary>
+      <ul>
+        <li><a href="https://biz.heraldcorp.com/article/10823749" target="_blank" rel="noopener">SK하이닉스 2Q 영업익 60.5조 — 헤럴드경제(7.29)</a></li>
+        <li><a href="https://www.hankookilbo.com/news/article/A2026072906270004345" target="_blank" rel="noopener">예상치 하회 — 한국일보(7.29)</a></li>
+        <li><a href="https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-2026%EB%85%84-2%EB%B6%84%EA%B8%B0-%EC%8B%A4%EC%A0%81-%EB%B0%9C%ED%91%9C" target="_blank" rel="noopener">삼성전자 2분기 확정실적 — 삼성 뉴스룸(공식)</a></li>
+        <li><a href="https://www.hankookilbo.com/news/article/A2026073007380001275" target="_blank" rel="noopener">DS 89.2조·완제품 적자 — 한국일보(7.30)</a></li>
+        <li><a href="https://biz.newdaily.co.kr/site/data/html/2026/07/30/2026073000048.html" target="_blank" rel="noopener">완제품 첫 적자 — 뉴데일리(7.30)</a></li>
+        <li><a href="https://finance.biggo.com/news/41a3cf6d-b02e-4d91-ba2b-398d59b8a4ae" target="_blank" rel="noopener">SOX +8.2%, 15개월 최대 — BigGo(7.30)</a></li>
+        <li><a href="https://moneymorning.com/2026/07/30/magnificent-7-weekly-report-july-30-2026" target="_blank" rel="noopener">MS·메타 CapEx 분석 — Money Morning(7.30)</a></li>
+        <li><a href="https://www.fool.com/investing/breakfast-news/2026/07/30/breakfast-news-ai-spend-splits-meta-and-microsoft/" target="_blank" rel="noopener">아마존 $180~190B 상향 — Motley Fool(7.30)</a></li>
+        <li><a href="https://finance.yahoo.com/news/meta-pops-10-135b-capex-171125951.html" target="_blank" rel="noopener">메타 CapEx — Yahoo Finance</a></li>
+        <li><a href="https://www.mt.co.kr/stock/2026/07/28/2026072817304086600" target="_blank" rel="noopener">"괴리 쉽게 안 좁혀진다" — 머니투데이(7.28)</a></li>
+        <li><a href="https://www.sedaily.com/article/20069178" target="_blank" rel="noopener">전환 가능 물량 2.5% — 서울경제</a></li>
+      </ul>
+    </details>
+
+    <div class="foot">
+      <span>공정한 시선 6호</span>
+      <span>발행인: (이름) · 구독: (뉴스레터 주소)</span>
+      <span>발행 2026. 8. 3. · 글로벌 신호 확인 2026년 8월 3일 자</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const gauge = document.getElementById('gauge');
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const p = h.scrollTop / (h.scrollHeight - h.clientHeight);
+  gauge.style.width = (p * 100).toFixed(2) + '%';
+}, {passive:true});
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('reveal-in'); io.unobserve(e.target); } });
+}, {threshold: 0.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
