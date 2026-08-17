@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CJ2MYKK22Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CJ2MYKK22Q');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>기울기는 꺾였는데, 연승은 계속된다 — 공정한 시선 8호</title>
+<meta name="description" content="工程의 눈으로 읽는 반도체 위클리 8호. 3분기 계약가 논쟁의 결말, SOX 사상 최장 16일 연승, 그리고 오늘 시작된 용인 첫 아파트 청약.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="기울기는 꺾였는데, 연승은 계속된다 — 공정한 시선 8호">
+<meta property="og:description" content="3Q 계약가 +13~18%로 결말, SOX 32년 역사상 최장 연승, 용인 청약 개시 — 工程의 눈으로 읽는 반도체 위클리.">
+<meta property="og:image" content="https://fablens.github.io/weekly/img/og-default.jpg">
+<meta property="og:url" content="https://fablens.github.io/weekly/gongjeong-08.html">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --navy:#152B47; --navy-deep:#0D1D33; --ink:#1C2430; --body:#3A4453;
+  --muted:#7A8494; --line:#E3E7EC; --paper:#FFFFFF; --bg:#F4F6F8;
+  --accent:#C0502D; --accent-soft:#FBF1EC;
+  --policy:#2E6B3A; --policy-soft:#EDF5EF; --policy-line:#BBD6C2;
+  --blue:#2E75B6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Pretendard','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Segoe UI',sans-serif;
+  background:var(--bg); color:var(--body); line-height:1.75; font-size:16.5px;
+  -webkit-font-smoothing:antialiased; word-break:keep-all;}
+
+#gauge{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:100;transition:width .1s linear}
+
+.hero{background:linear-gradient(rgba(13,29,51,.82), rgba(13,29,51,.92)), url('img/hero.jpg') center/cover no-repeat var(--navy-deep);
+  color:#fff; padding:0 24px;}
+.hero-inner{max-width:760px;margin:0 auto;min-height:82vh;display:flex;flex-direction:column;justify-content:center;padding:64px 0 56px}
+.kicker{font-size:12.5px;letter-spacing:.14em;color:#9FB2C9;font-weight:600}
+.hero h1{font-size:clamp(34px,6vw,54px);line-height:1.24;font-weight:800;letter-spacing:-0.02em;margin:24px 0 20px;color:#fff}
+.hero h1 .em{color:#F0A583}
+.hero .deck{font-size:clamp(16px,2.2vw,19px);color:#C3CFDE;line-height:1.8;max-width:620px}
+.hero .meta{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;gap:8px 28px;font-size:13px;color:#8FA3BC}
+.hero .meta b{color:#D8E2EE;font-weight:600}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+section.block{padding:68px 0 8px}
+.sec-title{font-size:clamp(22px,3.4vw,28px);font-weight:800;color:var(--ink);letter-spacing:-0.01em;margin-bottom:8px}
+.sec-desc{font-size:14px;color:var(--muted);margin-bottom:32px}
+
+.three{background:var(--paper);border-top:3px solid var(--accent)}
+.three-item{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:24px 0;align-items:start}
+.three-item + .three-item{border-top:1px solid var(--line)}
+.three-num{font-size:36px;font-weight:800;color:var(--accent);line-height:1;padding-top:4px}
+.three-txt{font-size:clamp(17px,2.4vw,19.5px);font-weight:700;color:var(--ink);line-height:1.6}
+.three-txt small{display:block;font-size:14px;font-weight:400;color:var(--muted);margin-top:6px}
+
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:32px 32px 26px;margin-bottom:24px;box-shadow:0 1px 2px rgba(16,32,54,.04)}
+.card h3{font-size:clamp(19px,2.8vw,22px);font-weight:800;color:var(--ink);line-height:1.45;letter-spacing:-0.01em;margin-bottom:6px}
+.card .takeaway{font-size:15.5px;font-weight:700;color:var(--accent);margin-bottom:15px}
+.card p.facts{font-size:15.5px;color:var(--body);margin-bottom:16px}
+.callout{border-radius:10px;padding:17px 19px;font-size:15.5px;line-height:1.75}
+.callout .lab{font-weight:800;margin-right:6px}
+.callout.biz{background:var(--accent-soft);border-left:4px solid var(--accent)}
+.callout.biz .lab{color:var(--accent)}
+.callout.policy{background:var(--policy-soft);border-left:4px solid var(--policy)}
+.callout.policy .lab{color:var(--policy)}
+.src{font-size:12.5px;color:var(--muted);margin-top:13px}
+.src a{color:var(--blue);text-decoration:none;border-bottom:1px dotted #B9CFE4}
+.lastweek{display:inline-block;font-size:11px;font-weight:700;color:var(--blue);border:1px solid #C9DCEE;background:#F2F7FC;border-radius:99px;padding:2px 10px;margin-left:8px;vertical-align:3px}
+
+.krow{border-left:4px solid var(--policy);padding:4px 0 4px 22px;margin-bottom:30px}
+.krow h3{font-size:clamp(17px,2.5vw,20px);font-weight:800;color:var(--ink);line-height:1.5;margin-bottom:8px}
+.krow p{font-size:15px;margin-bottom:10px}
+.krow .imp{font-size:15px;line-height:1.75}
+.krow .imp b{color:var(--policy)}
+.krow.biz{border-left-color:var(--accent)}
+.krow.biz .imp b{color:var(--accent)}
+
+.paper-card{border-left:5px solid var(--navy)}
+.timeline{display:flex;align-items:center;gap:0;margin:22px 0 6px;flex-wrap:wrap}
+.tl-node{text-align:center;flex:1;min-width:110px;padding:0 4px}
+.tl-node .yr{font-size:12px;font-weight:700;color:var(--muted)}
+.tl-node .lb{font-size:13.5px;font-weight:700;color:var(--ink);margin-top:2px}
+.tl-node .st{font-size:11.5px;color:var(--muted)}
+.tl-node::before{content:'';display:block;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--navy);margin:0 auto 8px}
+.tl-node.now::before{background:var(--accent);border-color:var(--accent)}
+.tl-bar{height:2px;background:var(--line);flex:0.6;min-width:24px;margin-bottom:52px}
+
+.fabnote{background:linear-gradient(135deg,#1C2E48 0%,#0D1D33 100%);color:#C9D5E4;border-radius:16px;padding:32px 32px 28px}
+.fabnote .fn-lab{font-size:11.5px;font-weight:800;letter-spacing:.18em;color:#F0A583}
+.fabnote h3{color:#fff;font-size:clamp(18px,2.6vw,22px);font-weight:800;margin:12px 0 14px;line-height:1.5}
+.fabnote p{font-size:15px;line-height:1.85}
+.fabnote .fn-tail{margin-top:14px;font-size:12.5px;color:#8FA3BC;font-style:italic}
+.fabnote .fn-img{width:calc(100% + 64px);max-width:none;margin:-32px -32px 22px;border-radius:16px 16px 0 0;display:block}
+@media (max-width:640px){.fabnote .fn-img{width:calc(100% + 40px);margin:-26px -20px 18px;border-radius:12px 12px 0 0}}
+
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.metric{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 18px}
+.metric .m-lab{font-size:12px;font-weight:700;color:var(--muted)}
+.metric .m-val{font-size:clamp(22px,3.4vw,29px);font-weight:800;color:var(--ink);margin:6px 0 2px}
+.metric .m-val.up{color:var(--accent)}
+.metric .m-val.down{color:var(--blue)}
+.metric .m-sub{font-size:11.5px;color:var(--muted);line-height:1.5}
+.metric-note{font-size:12px;color:var(--muted);margin-top:14px}
+
+.cal{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px 26px}
+.cal li{list-style:none;display:grid;grid-template-columns:96px 1fr;gap:16px;padding:13px 0;font-size:15px;align-items:start}
+.cal .d{font-weight:800;color:var(--navy);font-size:13.5px;background:var(--bg);border-radius:8px;text-align:center;padding:6px 4px}
+.cal .d.hot{background:var(--accent-soft);color:var(--accent)}
+
+.ticker li{list-style:none;padding:10px 0;font-size:15px}
+.ticker li b{color:var(--ink);font-size:13.5px;margin-right:8px}
+
+.pull{padding:60px 0}
+.pull blockquote{font-size:clamp(24px,4vw,33px);font-weight:800;line-height:1.5;color:var(--ink);letter-spacing:-0.015em;text-align:center}
+.pull blockquote span{background:linear-gradient(transparent 62%, #F6DACD 62%)}
+.pull .who{text-align:center;font-size:13px;color:var(--muted);margin-top:16px}
+
+.colophon{background:var(--navy-deep);color:#AAB9CC;margin-top:76px;padding:60px 24px 48px}
+.colophon .wrap{max-width:760px}
+.colophon h4{color:#fff;font-size:15px;letter-spacing:.1em;margin-bottom:18px}
+.colophon p{font-size:13.5px;line-height:1.9}
+.colophon .next{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:22px 26px;margin:28px 0}
+.colophon .next .nx-lab{font-size:11.5px;letter-spacing:.18em;color:#F0A583;font-weight:700}
+.colophon .next .nx-title{font-size:19px;font-weight:800;color:#fff;margin-top:8px}
+.colophon .next p{color:#93A5BB;margin-top:6px}
+.colophon .foot{border-top:1px solid rgba(255,255,255,.12);margin-top:32px;padding-top:22px;font-size:12px;color:#6D7F96;display:flex;flex-wrap:wrap;gap:6px 24px}
+details.srcbox{margin-top:24px}
+details.srcbox summary{cursor:pointer;font-size:13px;color:#8FA3BC}
+details.srcbox ul{margin:14px 0 0 2px}
+details.srcbox li{list-style:none;font-size:12.5px;line-height:2}
+details.srcbox a{color:#7FA8D9;text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.reveal-in{opacity:1;transform:none}
+
+@media (max-width:640px){
+  .card{padding:26px 20px 22px}
+  .fabnote{padding:26px 20px 22px}
+  .three-item{grid-template-columns:40px 1fr;gap:12px}
+  .three-num{font-size:28px}
+  .metrics{grid-template-columns:1fr}
+  .cal{padding:8px 16px}
+}
+@media print{
+  #gauge{display:none}
+  .hero-inner{min-height:auto;padding:40px 0}
+  .card{break-inside:avoid;box-shadow:none}
+}
+</style>
+</head>
+<body>
+<div id="gauge"></div>
+
+<!-- ================= 히어로 ================= -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">공정한 시선 · 반도체 위클리 8호</div>
+    <h1><span class="em">기울기</span>는 꺾였는데,<br>연승은 계속된다</h1>
+    <p class="deck">3분기 계약가는 D램 +13~18% — 2호부터 추적한 '기울기 논쟁'이 완만론의 승리로 끝났다. 가격의 기울기가 꺾이는 사이, 주가는 반대로 달렸다: SOX 16거래일 연승, 32년 역사상 최장. 그리고 오늘, 용인 클러스터 첫 아파트의 청약이 시작된다.</p>
+    <div class="meta">
+      <span><b>발행</b> 2026. 8. 18.(화)</span>
+      <span><b>글로벌 신호 확인</b> 2026년 8월 18일 자</span>
+      <span><b>읽는 시간</b> 약 9분</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= 핵심 3줄 ================= -->
+<section class="block three">
+  <div class="wrap">
+    <div class="sec-title">이번 주 핵심 3줄</div>
+    <div class="sec-desc">여기까지만 읽어도 이번 주는 따라갑니다.</div>
+    <div class="three-item reveal"><div class="three-num">1</div><div class="three-txt">3분기 계약가 결말 — D램 +13~18%, NAND +10~15% (TrendForce). 상승은 계속, 기울기는 절반 이하로.<small>2분기 +58~63%에서 급둔화 · "소비자 수용 한계 도달" · 2호 논쟁의 결말</small></div></div>
+    <div class="three-item reveal"><div class="three-num">2</div><div class="three-txt">SOX 16거래일 연승 — 32년 지수 역사상 최장, 연승 기간 +38.7%. 엔비디아 시총 4.92조 달러.<small>7월 약세장 진입(4호)에서 한 달 만의 반전 · 다음 분수령은 8/26 엔비디아 실적</small></div></div>
+    <div class="three-item reveal"><div class="three-num">3</div><div class="three-txt">용인 클러스터 첫 아파트 청약, 오늘 시작 — 589가구, 전국 1순위 가능, 분양가 상한제.<small>특별공급 8/18~19 · 1순위 8/20 · 당첨 발표 8/27 — 4호 예고의 실측 개시</small></div></div>
+  </div>
+</section>
+
+<!-- ================= 글로벌 헤드라인 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">글로벌 헤드라인</div>
+    <div class="sec-desc">사실은 짧게, 해석은 깊게.</div>
+
+    <article class="card reveal">
+      <h3>계약가 논쟁의 결말 — 천장이 보이기 시작했다, 바닥도 함께<span class="lastweek">2호 후속</span></h3>
+      <div class="takeaway">◆ 상승 지속 + 기울기 둔화 = 사이클의 1차 변곡 신호</div>
+      <p class="facts">TrendForce가 3분기 계약가를 범용 D램 +13~18%, 모바일 D램 +8~13%, NAND +10~15%로 전망했다 — 2분기(D램 +58~63%, NAND +55~60%)의 절반에도 못 미치는 기울기다. 배경으로는 전자제품 수요 약화와 "소비자 가격 부담·수용 한계 도달"이 지목됐다(보도). 2호에서 다룬 '삼성 +20% 통보 vs TrendForce +13~18%' 논쟁은 결과적으로 TrendForce 범위로 수렴했다.</p>
+      <div class="callout biz"><span class="lab">So what?</span>처음으로 천장의 형태가 보인 주다 — 6호의 세트 적자(삼성 DX -0.8조)가 예고했던 '수요 측의 한계'가 가격 협상에 반영되기 시작했다. 다만 바닥도 튼튼하다: 2026년 물량 완판(3호), 10곳 장기계약(7호), 빅테크 CapEx 상향(6호)이 수요의 하단을 받치고 있다. 정리하면 사이클은 '수직 상승'에서 '고원(플래토)'으로 넘어가는 국면이다 — 고원의 길이가 이번 슈퍼사이클의 총량을 결정하고, 그 답의 절반은 8월 26일 엔비디아가 들고 있다. <i>(필자 해석)</i></div>
+      <div class="src">출처: <a href="https://www.sedaily.com/article/20064210" target="_blank" rel="noopener">서울경제 — 3Q D램 +13~18%</a> · <a href="https://www.huffingtonpost.kr/article/258505" target="_blank" rel="noopener">허프포스트 — 상승률 10%대</a> · <a href="https://www.mt.co.kr/industry/2026/08/07/2026080613261399240" target="_blank" rel="noopener">머니투데이 — 모바일 D램(8.7)</a></div>
+    </article>
+
+    <article class="card reveal">
+      <h3>SOX 16거래일 연승 — 32년 역사에 없던 기록<span class="lastweek">지난 호 후속</span></h3>
+      <div class="takeaway">◆ 한 달 전 약세장이던 지수가 사상 최장 연승 중 — 변동성이 뉴노멀이다</div>
+      <p class="facts">필라델피아 반도체지수가 16거래일 연속 상승 — 1994년 집계 이래 최장 연승 기록이며, 연승 기간 상승률은 +38.7%다(보도). 엔비디아는 시가총액 4.92조 달러로 세계 1위를 지키고 있고, 실적 발표는 8월 26일이다. 예측시장에서는 데이터센터 매출 800억 달러 상회 확률을 95%로 매기고 있다(Polymarket, 참고 지표).</p>
+      <div class="callout biz"><span class="lab">So what?</span>이 브리핑의 시계열로 보면 7월 약세장 진입(4호) → 반등(5호) → +8.2% 랠리(6호) → 사상 최장 연승(이번 주)까지, 딱 5주다. 실물이 아니라 기대의 진폭이 만든 왕복이고, 이 왕복 자체가 이번 사이클의 특징으로 굳어지고 있다 — 가격 기울기가 꺾이는(헤드라인 1) 국면에서 주가가 최장 연승이라는 조합은, 시장이 '고원의 길이'에 베팅하고 있다는 뜻이다. 그 베팅의 채점일이 8월 26일이다. <i>(필자 해석)</i></div>
+      <div class="src">출처: <a href="https://finance.yahoo.com/news/semiconductor-stocks-like-nvidia-and-micron-are-on-a-remarkable-streak-150827239.html" target="_blank" rel="noopener">Yahoo Finance — 최장 연승</a> · <a href="https://www.startuphub.ai/ai-news/ai-stocks-daily/2026/ai-stocks-2026-08-14" target="_blank" rel="noopener">AI Stocks Daily(8.14)</a> · <a href="https://247wallst.com/investing/2026/08/13/3-semiconductor-stocks-to-buy-before-the-next-ai-earnings-wave-in-august/" target="_blank" rel="noopener">247WallSt — 8월 실적 웨이브</a></div>
+    </article>
+
+    <article class="card reveal">
+      <h3>용인 첫 아파트 청약 개시 — 클러스터 정주 여건의 첫 실측<span class="lastweek">4호 후속</span></h3>
+      <div class="takeaway">◆ 경쟁률이 곧 '용인에 살겠다'는 수요의 첫 데이터다</div>
+      <p class="facts">용인 반도체클러스터 산업단지 내 첫 공동주택 '동일하이빌 파크밸리' 1단지 589가구의 청약이 오늘(8/18) 특별공급으로 시작된다 — 1순위 20일, 2순위 21일, 당첨자 발표 27일. 산업단지 주택이라 거주지역과 무관하게 전국 1순위 청약이 가능하고, 분양가 상한제가 적용된다. 총 2개 단지 1,250가구 중 1단지 분양이다.</p>
+      <div class="callout policy"><span class="lab">정책 시사점</span>4호에서 "인력 유치의 실전은 학군과 병원"이라고 썼다 — 그 실전의 첫 성적표가 열흘 안에 나온다. 이 경쟁률은 아파트 시장 지표가 아니라 '2027년 가동 팹(5호 참조)에 출근할 사람들이 실제로 이주를 결심했는가'의 선행지표로 읽어야 한다. 전국 1순위 개방과 분양가 상한제라는 설계는 초기 수요를 끌어오는 장치로는 유효하나, 투자 수요와 실거주 수요가 섞이는 부작용도 같은 장치에서 나온다 — 당첨자 발표 후 실입주율까지가 진짜 데이터다.</div>
+      <div class="src">출처: <a href="https://www.news1.kr/local/gyeonggi/6255666" target="_blank" rel="noopener">뉴스1</a> · <a href="https://www.joongdo.co.kr/web/view.php?key=20260811010003499" target="_blank" rel="noopener">중도일보(8.11)</a> · <a href="https://m.news.nate.com/view/20260813n15171" target="_blank" rel="noopener">청약 일정(8.13)</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= 인용 ================= -->
+<div class="pull wrap reveal">
+  <blockquote>"시장은 지금 상승이 아니라<br><span>고원의 길이에 베팅하고 있다</span>"</blockquote>
+  <div class="who">— 이번 주 글로벌 헤드라인의 결론</div>
+</div>
+
+<!-- ================= K-레이더 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">K-레이더</div>
+    <div class="sec-desc">한국 생태계의 이번 주 신호들.</div>
+
+    <div class="krow biz reveal">
+      <h3>모바일 D램 +8~13% — 세트 업계의 숨통이 조금 트인다</h3>
+      <p>3분기 인상률 중 모바일 D램이 가장 완만하다(+8~13%). 스마트폰 원가 압박(6호 참조: 삼성 DX 적자)의 다음 분기 강도가 한 단계 낮아진다는 뜻이다.</p>
+      <div class="imp"><b>기업 시사점</b> — 세트 업체들의 '메모리 스펙 다운' 압력(6호에서 제기한 내년 수요 리스크)이 다소 완화될 여지가 생겼다. 다만 누적 인상분이 워낙 커서 하반기 신제품 가격 인상 자체는 불가피하다 — 소비자 가격 전가의 속도가 내년 수요의 변수로 남는다.</div>
+    </div>
+
+    <div class="krow reveal">
+      <h3>엔비디아 주간을 앞둔 K-밸류체인 — HBM 수요의 원천 데이터가 온다</h3>
+      <p>8월 26일 엔비디아 실적은 남의 회사 실적이 아니다 — 데이터센터 매출과 다음 분기 가이던스가 곧 한국 HBM 주문서의 원천 데이터다.</p>
+      <div class="imp"><b>기업 시사점</b> — 관전 순서: ①데이터센터 매출의 절대 규모 ②차기 플랫폼(HBM4 탑재) 언급 ③중국 매출 코멘트(1호부터 추적한 수출통제 변수). 세 가지가 다음 호 K-밸류체인 전망의 입력값이다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 논문에서 온 신호 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">논문에서 온 신호</div>
+    <div class="sec-desc">이번 주는 예고편입니다 — 하반기 최대 학회의 달력이 공개됐습니다.</div>
+
+    <article class="card paper-card reveal">
+      <h3>12월 샌프란시스코 — IEDM 2026, "지능 혁명의 심장에 있는 소자들"</h3>
+      <div class="takeaway">◆ 하반기 '논문에서 온 신호'의 주 무대가 확정됐다</div>
+      <p class="facts">제72회 IEDM(국제전자소자학회)이 12월 12~16일 샌프란시스코에서 열린다 — 주제는 "Devices at the Heart of the Intelligence Revolution". 일반 논문 접수는 7월에 마감됐고, 최신 성과를 담는 late-news 논문은 공교롭게도 오늘(8/18)이 마감이다. 채택 통보는 9월 9일 — 그때부터 어떤 연구가 무대에 오르는지 윤곽이 나온다. 지난해 IEDM에서는 모놀리식 CFET와 3D DRAM, 인메모리 컴퓨팅이 하이라이트였다(IEEE Spectrum).</p>
+
+      <div class="timeline" aria-label="IEDM 2026 일정">
+        <div class="tl-node now"><span class="yr">8/18 오늘</span><div class="lb">late-news 마감</div><div class="st">최신 성과 접수</div></div>
+        <div class="tl-bar"></div>
+        <div class="tl-node"><span class="yr">9/9</span><div class="lb">채택 통보</div><div class="st">프로그램 윤곽</div></div>
+        <div class="tl-bar"></div>
+        <div class="tl-node"><span class="yr">11월</span><div class="lb">프리뷰 시즌</div><div class="st">주요 논문 공개</div></div>
+        <div class="tl-bar"></div>
+        <div class="tl-node"><span class="yr">12/12~16</span><div class="lb">본 학회</div><div class="st">샌프란시스코</div></div>
+      </div>
+
+      <div class="callout biz"><span class="lab">이것이 의미하는 것</span>이 브리핑이 다뤄온 신호들 — CFET(1호), 강유전체(2호), IGZO 3D DRAM(3호), 광 인터포저(4호), 하이브리드 본딩(5호) — 의 다음 데이터가 대부분 이 무대에서 나온다. late-news 마감일이 오늘이라는 건, 지금 이 순간 각 사 연구소들이 올해의 가장 신선한 결과를 접수하고 있다는 뜻이다. 9월 9일 채택 발표가 나오면 프로그램에서 한국 양사와 imec·인텔·TSMC의 출품 경향을 읽어 하반기 R&D 지형도를 정리해 드린다 — 달력에 표시해 둔다.</div>
+      <div class="src">출처: <a href="https://ieee-iedm.org/call-for-papers-overview/" target="_blank" rel="noopener">IEDM 공식 — Call for Papers</a> · <a href="https://www.semiconductor-digest.com/ieee-international-electron-devices-meeting-announces-2026-call-for-papers/" target="_blank" rel="noopener">Semiconductor Digest</a> · <a href="https://spectrum.ieee.org/iedm/complementary-fets-and-3d-circuits" target="_blank" rel="noopener">IEEE Spectrum — 지난해 하이라이트</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= 공정 한 컷 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">공정 한 컷</div>
+    <div class="sec-desc">전직 팹 엔지니어의 시선으로, 매호 용어 하나를 현장의 언어로 풉니다.</div>
+
+    <div class="fabnote reveal">
+      <div class="fn-lab">FAB NOTE · 8호</div>
+      <h3>정기구독과 편의점 — 계약가와 현물가는 왜 따로 노는가</h3>
+      <p>이 브리핑이 8주 내내 쓴 '계약가'라는 말을 오늘 한 번 뜯어보자. 메모리 가격에는 두 개의 시장이 있다 — 계약가는 대형 고객이 분기 단위로 물량을 약정하는 정기구독 가격이고, 현물가는 그때그때 소량을 사고파는 편의점 가격이다. 세트 대기업의 원가는 계약가가 정하고, 뉴스 헤드라인의 '가격 급등'은 대개 현물가가 먼저 만든다. 둘의 관계가 중요한 이유는 순서다: 공급이 마르면 현물가가 먼저 뛰고, 다음 분기 계약 협상 테이블에서 공급자가 그 현물가를 근거로 계약가를 올린다 — 2분기 +63%는 그렇게 만들어졌다. 거꾸로 사이클이 꺾일 때도 현물가가 먼저 빠진다. 그래서 현장과 시장을 잇는 사람들은 계약가 발표보다 현물가의 방향 전환을 먼저 본다 — 이번 주 '+13~18%'라는 결말(헤드라인 1)보다 중요한 것은, 다음 변곡을 알려줄 현물가의 흐름이다. 이 브리핑의 지표 코너가 언젠가 현물가 트래킹을 벼르는 이유이기도 하다.</p>
+      <div class="fn-tail">— 이 코너는 필자의 공정 경험에 기반한 개념 해설로, 실제 계약 관행의 세부와 다를 수 있습니다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 이번 주 지표 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">이번 주 지표</div>
+    <div class="sec-desc">시장의 온도를 숫자 세 개로.</div>
+    <div class="metrics reveal">
+      <div class="metric">
+        <div class="m-lab">3Q D램 계약가 (확정 전망)</div>
+        <div class="m-val up">+13~18%</div>
+        <div class="m-sub">전분기 +58~63%에서 기울기 급둔화 (TrendForce) — 2호 논쟁 종결</div>
+      </div>
+      <div class="metric">
+        <div class="m-lab">SOX 연승 기록</div>
+        <div class="m-val up">16일</div>
+        <div class="m-sub">32년 역사상 최장, 연승 기간 +38.7% (보도) — 4호 약세장에서 5주</div>
+      </div>
+      <div class="metric">
+        <div class="m-lab">엔비디아 시가총액</div>
+        <div class="m-val">$4.92T</div>
+        <div class="m-sub">세계 1위 — 실적 발표 8/26, 사이클 베팅의 채점일</div>
+      </div>
+    </div>
+    <div class="metric-note">※ 자체 시계열 8주차 — 계약가 기울기(2Q +58~63% → 3Q +13~18%)와 SOX 왕복(약세장→최장 연승)이 같은 사이클의 양면으로 기록됐습니다.</div>
+  </div>
+</section>
+
+<!-- ================= 캘린더 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">이번 주 캘린더</div>
+    <div class="sec-desc">다음 호에서 다루게 될 일정들.</div>
+    <ul class="cal reveal">
+      <li><span class="d">8/20~21</span><span>용인 첫 아파트 1·2순위 청약 — 경쟁률이 정주 수요의 첫 실측 (헤드라인 3 참조)</span></li>
+      <li><span class="d hot">8/26 (수)</span><span>엔비디아 2분기 실적 — 사이클 베팅의 채점일, HBM 주문서의 원천 데이터</span></li>
+      <li><span class="d">8/27 (목)</span><span>용인 아파트 당첨자 발표 · 잭슨홀 미팅 개막(8/27~29) — 금리 경로와 밸류에이션 (보도 기준)</span></li>
+      <li><span class="d">9/9 (수)</span><span>IEDM 2026 논문 채택 통보 — 하반기 R&D 지형도 읽기 예약 (논문 신호 참조)</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 한 줄 동향 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">한 줄 동향</div>
+    <div class="sec-desc">나머지 신호들, 한 줄씩만.</div>
+    <ul class="ticker reveal">
+      <li><b>예측시장</b>폴리마켓, 엔비디아 데이터센터 매출 $800억 상회 확률 95% (참고 지표, 보도).</li>
+      <li><b>수익률</b>엔비디아 실적 전, 반도체 10개 종목이 이미 S&amp;P500 수익률 상회 (보도).</li>
+      <li><b>학회</b>IEDM late-news 논문 마감이 오늘 — 각 사의 올해 최신 성과가 지금 접수되고 있다.</li>
+      <li><b>가격</b>모바일 D램 +8~13%로 가장 완만 — 세트 숨통은 K-레이더 참조.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 콜로폰 ================= -->
+<footer class="colophon">
+  <div class="wrap">
+    <h4>ABOUT THIS BRIEF</h4>
+    <p>「공정한 시선」은 반도체 공정 개발 현장을 거친 필자가 발행하는 주간 브리핑입니다. 글로벌 반도체 뉴스를 나열하는 대신 공정·소재의 눈(工程)으로 '왜'를 해설하고, 기업의 판단과 정책의 판단에 각각 필요한 시사점으로 번역하며(公正), 학회·논문에서 뉴스보다 2~3년 빠른 신호를 발굴합니다. 본 호는 발행일 기준 공개 뉴스·학회 발표·시장조사 자료의 교차 확인으로 제작되었습니다. (보도)·(추정) 표기 수치는 2차 보도 기반으로 원 자료 확인 전이며, '필자 해석'은 공개 정보에 대한 개인 견해입니다. 본 브리핑은 투자 권유가 아닙니다.</p>
+
+    <div class="next">
+      <div class="nx-lab">NEXT ISSUE — 다음 주 예고</div>
+      <div class="nx-title">엔비디아의 밤 — 8월 26일이 말해줄 사이클의 좌표</div>
+      <p>데이터센터 매출, 차기 플랫폼, 중국 코멘트 — 그리고 용인 청약 경쟁률까지, 실측의 한 주를 정리합니다.</p>
+    </div>
+
+    <details class="srcbox">
+      <summary>전체 출처 목록 펼치기 (12건)</summary>
+      <ul>
+        <li><a href="https://www.sedaily.com/article/20064210" target="_blank" rel="noopener">3Q D램 +13~18% — 서울경제</a></li>
+        <li><a href="https://www.huffingtonpost.kr/article/258505" target="_blank" rel="noopener">3Q 상승률 10%대 전망 — 허프포스트</a></li>
+        <li><a href="https://www.mt.co.kr/industry/2026/08/07/2026080613261399240" target="_blank" rel="noopener">모바일 D램 +8~13% — 머니투데이(8.7)</a></li>
+        <li><a href="https://www.businesspost.co.kr/BP?command=article_view&num=441625" target="_blank" rel="noopener">인상률 둔화·수요 약화 — 비즈니스포스트</a></li>
+        <li><a href="https://finance.yahoo.com/news/semiconductor-stocks-like-nvidia-and-micron-are-on-a-remarkable-streak-150827239.html" target="_blank" rel="noopener">SOX 최장 연승 — Yahoo Finance</a></li>
+        <li><a href="https://www.startuphub.ai/ai-news/ai-stocks-daily/2026/ai-stocks-2026-08-14" target="_blank" rel="noopener">엔비디아 시총 $4.92T — AI Stocks Daily(8.14)</a></li>
+        <li><a href="https://247wallst.com/investing/2026/08/13/3-semiconductor-stocks-to-buy-before-the-next-ai-earnings-wave-in-august/" target="_blank" rel="noopener">8월 실적 웨이브·잭슨홀 — 247WallSt(8.13)</a></li>
+        <li><a href="https://seekingalpha.com/news/4481379-ahead-of-nvidias-earnings-these-10-semiconductor-stocks-are-already-beating-the-sp-500" target="_blank" rel="noopener">엔비디아 실적 전 10종목 — Seeking Alpha</a></li>
+        <li><a href="https://www.news1.kr/local/gyeonggi/6255666" target="_blank" rel="noopener">용인 첫 민간아파트 분양 — 뉴스1</a></li>
+        <li><a href="https://www.joongdo.co.kr/web/view.php?key=20260811010003499" target="_blank" rel="noopener">청약 시작 — 중도일보(8.11)</a></li>
+        <li><a href="https://ieee-iedm.org/call-for-papers-overview/" target="_blank" rel="noopener">IEDM 2026 Call for Papers — 공식</a></li>
+        <li><a href="https://spectrum.ieee.org/iedm/complementary-fets-and-3d-circuits" target="_blank" rel="noopener">CFET·3D 회로 — IEEE Spectrum</a></li>
+      </ul>
+    </details>
+
+    <div class="foot">
+      <span>공정한 시선 8호</span>
+      <span>발행인: (이름) · 구독: (뉴스레터 주소)</span>
+      <span>발행 2026. 8. 18. · 글로벌 신호 확인 2026년 8월 18일 자</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const gauge = document.getElementById('gauge');
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const p = h.scrollTop / (h.scrollHeight - h.clientHeight);
+  gauge.style.width = (p * 100).toFixed(2) + '%';
+}, {passive:true});
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('reveal-in'); io.unobserve(e.target); } });
+}, {threshold: 0.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
