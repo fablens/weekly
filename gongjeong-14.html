@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CJ2MYKK22Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CJ2MYKK22Q');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>190조의 분기, 52주의 납기 — 공정한 시선 14호</title>
+<meta name="description" content="工程의 눈으로 읽는 반도체 위클리 14호. 삼성·SK하이닉스 3분기 영업이익 190조 전망, 서버 DDR5 리드타임 52주, 텅스텐 8배 폭등. 공정 한 컷은 리드타임.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="190조의 분기, 52주의 납기 — 공정한 시선 14호">
+<meta property="og:description" content="국내 첫 분기 영업이익 100조가 눈앞인데, 서버 D램 납기는 1년이 됐다. 그리고 텅스텐값은 8배. 工程의 눈으로 읽는 반도체 위클리.">
+<meta property="og:image" content="https://fablens.github.io/weekly/img/og-default.jpg">
+<meta property="og:url" content="https://fablens.github.io/weekly/gongjeong-14.html">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --navy:#152B47; --navy-deep:#0D1D33; --ink:#1C2430; --body:#3A4453;
+  --muted:#7A8494; --line:#E3E7EC; --paper:#FFFFFF; --bg:#F4F6F8;
+  --accent:#C0502D; --accent-soft:#FBF1EC;
+  --policy:#2E6B3A; --policy-soft:#EDF5EF; --policy-line:#BBD6C2;
+  --blue:#2E75B6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Pretendard','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Segoe UI',sans-serif;
+  background:var(--bg); color:var(--body); line-height:1.75; font-size:16.5px;
+  -webkit-font-smoothing:antialiased; word-break:keep-all;}
+
+#gauge{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:100;transition:width .1s linear}
+
+.hero{background:linear-gradient(rgba(13,29,51,.82), rgba(13,29,51,.92)), url('img/hero.jpg') center/cover no-repeat var(--navy-deep);
+  color:#fff; padding:0 24px;}
+.hero-inner{max-width:760px;margin:0 auto;min-height:82vh;display:flex;flex-direction:column;justify-content:center;padding:64px 0 56px}
+.kicker{font-size:12.5px;letter-spacing:.14em;color:#9FB2C9;font-weight:600}
+.hero h1{font-size:clamp(34px,6vw,54px);line-height:1.24;font-weight:800;letter-spacing:-0.02em;margin:24px 0 20px;color:#fff}
+.hero h1 .em{color:#F0A583}
+.hero .deck{font-size:clamp(16px,2.2vw,19px);color:#C3CFDE;line-height:1.8;max-width:620px}
+.hero .meta{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;gap:8px 28px;font-size:13px;color:#8FA3BC}
+.hero .meta b{color:#D8E2EE;font-weight:600}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+section.block{padding:68px 0 8px}
+.sec-title{font-size:clamp(22px,3.4vw,28px);font-weight:800;color:var(--ink);letter-spacing:-0.01em;margin-bottom:8px}
+.sec-desc{font-size:14px;color:var(--muted);margin-bottom:32px}
+
+.three{background:var(--paper);border-top:3px solid var(--accent)}
+.three-item{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:24px 0;align-items:start}
+.three-item + .three-item{border-top:1px solid var(--line)}
+.three-num{font-size:36px;font-weight:800;color:var(--accent);line-height:1;padding-top:4px}
+.three-txt{font-size:clamp(17px,2.4vw,19.5px);font-weight:700;color:var(--ink);line-height:1.6}
+.three-txt small{display:block;font-size:14px;font-weight:400;color:var(--muted);margin-top:6px}
+
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:32px 32px 26px;margin-bottom:24px;box-shadow:0 1px 2px rgba(16,32,54,.04)}
+.card h3{font-size:clamp(19px,2.8vw,22px);font-weight:800;color:var(--ink);line-height:1.45;letter-spacing:-0.01em;margin-bottom:6px}
+.card .takeaway{font-size:15.5px;font-weight:700;color:var(--accent);margin-bottom:15px}
+.card p.facts{font-size:15.5px;color:var(--body);margin-bottom:16px}
+.callout{border-radius:10px;padding:17px 19px;font-size:15.5px;line-height:1.75}
+.callout .lab{font-weight:800;margin-right:6px}
+.callout.biz{background:var(--accent-soft);border-left:4px solid var(--accent)}
+.callout.biz .lab{color:var(--accent)}
+.callout.policy{background:var(--policy-soft);border-left:4px solid var(--policy)}
+.callout.policy .lab{color:var(--policy)}
+.src{font-size:12.5px;color:var(--muted);margin-top:13px}
+.src a{color:var(--blue);text-decoration:none;border-bottom:1px dotted #B9CFE4}
+.lastweek{display:inline-block;font-size:11px;font-weight:700;color:var(--blue);border:1px solid #C9DCEE;background:#F2F7FC;border-radius:99px;padding:2px 10px;margin-left:8px;vertical-align:3px}
+
+.krow{border-left:4px solid var(--policy);padding:4px 0 4px 22px;margin-bottom:30px}
+.krow h3{font-size:clamp(17px,2.5vw,20px);font-weight:800;color:var(--ink);line-height:1.5;margin-bottom:8px}
+.krow p{font-size:15px;margin-bottom:10px}
+.krow .imp{font-size:15px;line-height:1.75}
+.krow .imp b{color:var(--policy)}
+.krow.biz{border-left-color:var(--accent)}
+.krow.biz .imp b{color:var(--accent)}
+
+.paper-card{border-left:5px solid var(--navy)}
+.pick{padding:18px 0}
+.pick + .pick{border-top:1px solid var(--line)}
+.pick h4{font-size:16.5px;font-weight:800;color:var(--ink);margin-bottom:6px}
+.pick p{font-size:14.5px;line-height:1.75}
+.pick .who{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:4px}
+
+.fabnote{background:linear-gradient(135deg,#1C2E48 0%,#0D1D33 100%);color:#C9D5E4;border-radius:16px;padding:32px 32px 28px}
+.fabnote .fn-lab{font-size:11.5px;font-weight:800;letter-spacing:.18em;color:#F0A583}
+.fabnote h3{color:#fff;font-size:clamp(18px,2.6vw,22px);font-weight:800;margin:12px 0 14px;line-height:1.5}
+.fabnote p{font-size:15px;line-height:1.85}
+.fabnote .fn-tail{margin-top:14px;font-size:12.5px;color:#8FA3BC;font-style:italic}
+.fabnote .fn-img{width:calc(100% + 64px);max-width:none;margin:-32px -32px 22px;border-radius:16px 16px 0 0;display:block}
+@media (max-width:640px){.fabnote .fn-img{width:calc(100% + 40px);margin:-26px -20px 18px;border-radius:12px 12px 0 0}}
+
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.metric{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 18px}
+.metric .m-lab{font-size:12px;font-weight:700;color:var(--muted)}
+.metric .m-val{font-size:clamp(22px,3.4vw,29px);font-weight:800;color:var(--ink);margin:6px 0 2px}
+.metric .m-val.up{color:var(--accent)}
+.metric .m-sub{font-size:11.5px;color:var(--muted);line-height:1.5}
+.metric-note{font-size:12px;color:var(--muted);margin-top:14px}
+
+.cal{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px 26px}
+.cal li{list-style:none;display:grid;grid-template-columns:96px 1fr;gap:16px;padding:13px 0;font-size:15px;align-items:start}
+.cal .d{font-weight:800;color:var(--navy);font-size:13.5px;background:var(--bg);border-radius:8px;text-align:center;padding:6px 4px}
+.cal .d.hot{background:var(--accent-soft);color:var(--accent)}
+
+.ticker li{list-style:none;padding:10px 0;font-size:15px}
+.ticker li b{color:var(--ink);font-size:13.5px;margin-right:8px}
+
+.pull{padding:60px 0}
+.pull blockquote{font-size:clamp(24px,4vw,33px);font-weight:800;line-height:1.5;color:var(--ink);letter-spacing:-0.015em;text-align:center}
+.pull blockquote span{background:linear-gradient(transparent 62%, #F6DACD 62%)}
+.pull .who{text-align:center;font-size:13px;color:var(--muted);margin-top:16px}
+
+.colophon{background:var(--navy-deep);color:#AAB9CC;margin-top:76px;padding:60px 24px 48px}
+.colophon .wrap{max-width:760px}
+.colophon h4{color:#fff;font-size:15px;letter-spacing:.1em;margin-bottom:18px}
+.colophon p{font-size:13.5px;line-height:1.9}
+.colophon .next{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:22px 26px;margin:28px 0}
+.colophon .next .nx-lab{font-size:11.5px;letter-spacing:.18em;color:#F0A583;font-weight:700}
+.colophon .next .nx-title{font-size:19px;font-weight:800;color:#fff;margin-top:8px}
+.colophon .next p{color:#93A5BB;margin-top:6px}
+.colophon .foot{border-top:1px solid rgba(255,255,255,.12);margin-top:32px;padding-top:22px;font-size:12px;color:#6D7F96;display:flex;flex-wrap:wrap;gap:6px 24px}
+details.srcbox{margin-top:24px}
+details.srcbox summary{cursor:pointer;font-size:13px;color:#8FA3BC}
+details.srcbox ul{margin:14px 0 0 2px}
+details.srcbox li{list-style:none;font-size:12.5px;line-height:2}
+details.srcbox a{color:#7FA8D9;text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.reveal-in{opacity:1;transform:none}
+
+@media (max-width:640px){
+  .card{padding:26px 20px 22px}
+  .fabnote{padding:26px 20px 22px}
+  .three-item{grid-template-columns:40px 1fr;gap:12px}
+  .three-num{font-size:28px}
+  .metrics{grid-template-columns:1fr}
+  .cal{padding:8px 16px}
+}
+@media print{
+  #gauge{display:none}
+  .hero-inner{min-height:auto;padding:40px 0}
+  .card{break-inside:avoid;box-shadow:none}
+}
+</style>
+</head>
+<body>
+<div id="gauge"></div>
+
+<!-- ================= 히어로 ================= -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">공정한 시선 · 반도체 위클리 14호</div>
+    <h1><span class="em">190조</span>의 분기,<br>52주의 납기</h1>
+    <p class="deck">삼성전자와 SK하이닉스의 3분기 영업이익 합산 190조 원. 국내 기업 최초의 분기 영업이익 100조가 눈앞이다. 그런데 같은 주, 서버용 DDR5의 납기는 52주까지 늘었고 텅스텐 가격은 1년 반 만에 여덟 배가 됐다. 호황의 숫자와 공급 제약의 숫자가 같은 방향으로 커지는 중이다 — 사실 그 둘은 같은 이야기다.</p>
+    <div class="meta">
+      <span><b>발행</b> 2026. 9. 28.(월)</span>
+      <span><b>글로벌 신호 확인</b> 2026년 9월 28일 자</span>
+      <span><b>읽는 시간</b> 약 10분</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= 핵심 3줄 ================= -->
+<section class="block three">
+  <div class="wrap">
+    <div class="sec-title">이번 주 핵심 3줄</div>
+    <div class="sec-desc">여기까지만 읽어도 이번 주는 따라갑니다.</div>
+    <div class="three-item reveal"><div class="three-num">1</div><div class="three-txt">삼성 111조·SK하이닉스 78조 — 3분기 합산 영업이익 190조 원 전망. 분기 영업이익 100조 돌파는 국내 기업 최초다.<small>와이즈리포트 컨센서스 기준 (보도) · 삼성은 4개 분기 연속 최대 실적 경신</small></div></div>
+    <div class="three-item reveal"><div class="three-num">2</div><div class="three-txt">서버용 DDR5 리드타임 최대 52주 — 정상(6주)의 여덟 배. 주문하고 1년을 기다리는 시장이 됐다.<small>HBM에 캐파를 내주며 범용 D램이 구조적으로 마르는 중 (KB증권, 보도)</small></div></div>
+    <div class="three-item reveal"><div class="three-num">3</div><div class="three-txt">텅스텐 APT 가격 톤당 342달러 → 2,950달러, 1년 7개월 만에 여덟 배.<small>12호가 말한 '금속 교체'의 두 번째 이유가 드러났다 — 성능만이 아니라 공급망이다</small></div></div>
+  </div>
+</section>
+
+<!-- ================= 글로벌 헤드라인 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">글로벌 헤드라인</div>
+    <div class="sec-desc">사실은 짧게, 해석은 깊게.</div>
+
+    <article class="card reveal">
+      <h3>분기 영업이익 100조 — 한국 제조업이 한 번도 가보지 않은 숫자</h3>
+      <div class="takeaway">◆ 기록 경신이 네 분기째 반복되면, 그건 사건이 아니라 국면이다</div>
+      <p class="facts">와이즈리포트 집계 기준 삼성전자의 3분기 예상 매출은 204조7647억 원, 영업이익은 111조3772억 원이다(전년 동기 대비 각각 +137.9%, +815.5%). 분기 영업이익이 100조 원을 넘는 것은 국내 기업 최초이며, 역대 최대였던 2분기(89조4924억 원)를 다시 경신하는 4개 분기 연속 기록이다. SK하이닉스는 매출 99조5381억 원, 영업이익 78조1291억 원으로 추정된다(매출 +307.1%, 영업이익 +586.3%). 두 회사 합산 영업이익은 190조 원 수준이다. 모두 증권가 추정치이며, 확정 실적은 10월 이후 발표된다.</p>
+      <div class="callout biz"><span class="lab">So what?</span>숫자의 크기보다 중요한 건 <b>이익이 어디서 나오는가</b>다. 삼성의 3분기 HBM4 매출은 전 분기 대비 3배 이상 늘고 하반기에는 HBM4가 전체 HBM 매출의 60%를 넘을 것으로 추정된다(보도). 즉 이 이익은 물량이 아니라 제품 믹스에서 나온다 — 같은 웨이퍼로 더 비싼 것을 만들고 있다는 뜻이다. 공정의 눈으로 보면 이 구조에는 값이 따라붙는다. HBM 한 장을 더 만들려면 범용 D램 한 장을 덜 만들어야 하고, 그 결과가 바로 다음 헤드라인이다. 6호와 8호에서 '고원의 길이'를 물었던 질문에 대한 이번 주의 답은 이렇다: 고원은 아직 끝나지 않았지만, 고원의 폭은 좁아지고 있다. <i>(필자 해석)</i></div>
+      <div class="src">출처: <a href="https://www.fnnews.com/news/202609280631163675" target="_blank" rel="noopener">뉴스1·파이낸셜뉴스 — 3Q 최대 실적 전망(9.28)</a></div>
+    </article>
+
+    <article class="card reveal">
+      <h3>주문하고 1년 — 서버 DDR5 리드타임 52주가 말하는 것</h3>
+      <div class="takeaway">◆ 품귀는 수요가 늘어서가 아니라, 만들 자리를 HBM에 내줘서 생겼다</div>
+      <p class="facts">9월 현재 서버용 고용량 DDR5의 리드타임이 최대 52주까지 늘어난 것으로 파악됐다. 정상적인 시장 리드타임 6주와 비교하면 여덟 배 이상이다(KB증권 김동원 리서치본부장, 보도). 배경에는 캐파 재배분이 있다. KB증권 추정으로 삼성전자의 전체 D램 생산능력 중 HBM 비중은 2025년 27%에서 2026년 33%, 2027년 40%로 오르는 반면 범용 D램 비중은 73% → 65% → 59%로 내려간다. 3분기 범용 D램 계약가는 전 분기 대비 13~18%, 낸드는 10~15% 오를 전망이다(트렌드포스).</p>
+      <div class="callout biz"><span class="lab">So what?</span>리드타임 52주는 가격보다 무서운 숫자다. 가격은 협상으로 조정되지만 <b>납기는 물리적으로 줄일 수 없다</b> — 팹의 캐파는 한 달 만에 늘어나지 않고, HBM 라인으로 돌린 장비를 범용 D램으로 되돌리는 데도 시간과 비용이 든다(공정 한 컷 참조). 이 구조에서 손해를 보는 쪽은 메모리 3사가 아니라 그 아래다. 서버·PC·산업용 세트 업체, 국내 중견 장비·모듈사, 그리고 AI 인프라를 깔아야 하는 후발 데이터센터는 돈이 있어도 부품을 못 구한다. 메모리 호황이 전방 산업의 병목이 되는 국면이 시작됐다는 뜻이고, 이건 정책 쪽에서도 들여다볼 문제다. <i>(필자 해석)</i></div>
+      <div class="callout policy" style="margin-top:12px"><span class="lab">정책 시사점</span>수출액이 사상 최대(11호)라는 지표와 국내 세트 산업이 메모리를 못 구한다는 현실은 동시에 성립한다. 반도체 호황의 과실이 소수 대기업에 집중되고 그 반대급부가 전방 중소·중견기업의 조달 비용으로 전가되는 구조라면, 지원 정책의 초점도 '증설 지원'만이 아니라 '국내 배분'과 '전방 산업 조달'을 함께 봐야 한다. 다만 이는 기업의 판매 자유와 충돌하는 영역이라 개입보다 정보 제공·계약 관행 개선 쪽이 현실적이다.</div>
+      <div class="src">출처: <a href="https://www.fnnews.com/news/202609280631163675" target="_blank" rel="noopener">뉴스1·파이낸셜뉴스 — DDR5 리드타임 52주(9.28)</a></div>
+    </article>
+
+    <article class="card reveal">
+      <h3>텅스텐 여덟 배 — 금속을 바꾸는 이유가 하나 더 늘었다<span class="lastweek">12호 후속</span></h3>
+      <div class="takeaway">◆ 저항 40%를 줄이려던 교체가, 이제는 공급망 문제이기도 하다</div>
+      <p class="facts">텅스텐 국제 기준가인 파라텅스텐산암모늄(APT) 가격이 2025년 2월 톤당 342.50달러에서 2026년 9월 18일 기준 톤당 2,950달러로 여덟 배 이상 올랐다(패스트마켓츠). 중국 상무부가 텅스텐 원광과 초경합금 제품을 군민 이중용도 품목으로 지정해 서방 수출을 통제한 결과다. 중국은 전 세계 텅스텐 생산의 약 80%를 차지한다(USGS). 이런 가운데 미국 엘멧 그룹이 중국 외 세계 최대 텅스텐 가공 거점인 베트남 마산 하이테크 머티리얼즈의 지분 4.99%를 약 1억2500만 달러에 인수하고, 8년간 연 1,250톤 규모의 장기 구매 계약을 맺었다(닛케이 아시아, 9.25 현지). 엘멧은 앞서 미 국방물류국으로부터 약 20억 달러 규모 비축 계약을 단독 수주했다.</p>
+      <div class="callout biz"><span class="lab">So what?</span>12호에서 삼성이 낸드 워드라인 금속을 텅스텐(W)에서 몰리브덴(Mo)으로 바꿔 접촉 저항을 40% 낮췄다는 IEDM 발표를 다뤘다. 그때는 이 교체를 <b>성능의 문제</b>로 읽었다. 이번 주 숫자는 거기에 <b>공급망의 문제</b>를 더한다 — 30년 쓴 금속의 80%를 한 나라가 쥐고 있고, 그 나라가 수출을 조이자 값이 여덟 배가 됐다. 반도체용 텅스텐은 전체 수요에서 차지하는 비중이 방산·절삭공구보다 작아 당장 팹이 멈추는 그림은 아니다. 하지만 소재 로드맵을 짜는 입장에서는 계산식이 달라진다: 저항 40%라는 보상에 '중국 의존 축소'라는 항목이 추가로 붙는다. 국내 소부장 관점에서는 몰리브덴·루테늄 전구체 쪽의 진입 창(12호)이 그만큼 더 넓어졌다는 신호로 읽힌다. <i>(필자 해석)</i></div>
+      <div class="src">출처: <a href="https://www.g-enews.com/article/Global-Biz/2026/09/2026092523002132780c8c1c064d_1" target="_blank" rel="noopener">글로벌이코노믹 — 엘멧, 베트남 마산 지분 인수(9.26)</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= 인용 ================= -->
+<div class="pull wrap reveal">
+  <blockquote>"가격은 협상으로 조정되지만,<br><span>납기는 줄일 수 없다</span>"</blockquote>
+  <div class="who">— 리드타임 52주가 가격표보다 무거운 이유</div>
+</div>
+
+<!-- ================= K-레이더 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">K-레이더</div>
+    <div class="sec-desc">한국 생태계의 이번 주 신호들.</div>
+
+    <div class="krow reveal">
+      <h3>"사람이 없다" — 팹은 늘어나는데 채울 인력이 없다<span class="lastweek">13호 후속</span></h3>
+      <p>삼성전자가 미국 테일러 팹의 2나노 양산을 위해 현지 채용을 확대하고 있다는 보도가 나왔다. 앞서 국내에서도 향후 필요한 반도체 인력과 실제 공급 사이의 간극을 지적하는 보도가 이어졌다. 13호에서 정리한 SK하이닉스의 미·일 투자설, 업계 관계자의 "팹이 들어설 여건과 환경이 까다롭다"는 언급과 같은 맥락이다.</p>
+      <div class="imp"><b>정책 시사점</b> — 이번 호의 세 헤드라인은 모두 같은 지점을 가리킨다. 돈(190조)은 있고 주문(52주 대기)도 있는데, 만들 자리와 만들 사람이 모자란다. 증설 속도를 결정하는 제약이 자본에서 인력·부지·전력으로 넘어갔다는 뜻이다. 인력 정책은 효과가 나오는 데 최소 3~5년이 걸리므로 지금 시작해도 2030년대 초에 닿는다 — 9호의 용인 정주 문제, 12호의 전력망 숙제와 한 묶음으로 다뤄야 할 사안이다.</div>
+      <div class="src">출처: 삼성 美 현지 채용 확대 관련 보도(9.27) 종합</div>
+    </div>
+
+    <div class="krow biz reveal">
+      <h3>유리기판 캐리어 2.5배 — HBM4 증산의 국내 소부장 신호</h3>
+      <p>삼성전자가 HBM4 생산 확대에 대응해 유리기판 캐리어 조달을 대폭 늘리고 있으며, 2027년에는 월 5만 시트 규모로 2026년 대비 약 2.5배 물량을 소화할 방침이라는 보도가 나왔다(9.22).</p>
+      <div class="imp"><b>기업 시사점</b> — HBM 세대가 올라갈수록 승부는 셀이 아니라 패키징에서 갈린다는 이야기(13호 공정 한 컷)의 구체적 증거다. 유리기판 캐리어는 고온·고압 본딩 과정에서 스택의 휨(warpage)을 잡아주는 부자재로, 단수가 늘수록 요구 조건이 까다로워진다. 조달 물량 2.5배는 곧 관련 소재·부자재 업체의 수주 가시성이 2027년까지 확보된다는 뜻이다. 창간호에서 "부가가치는 후공정으로" 간다고 썼던 흐름이 이제 부자재 단계까지 내려왔다.</div>
+      <div class="src">출처: 삼성 HBM4 유리기판 캐리어 조달 확대 보도(9.22)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 논문·표준에서 온 신호 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">표준에서 온 신호</div>
+    <div class="sec-desc">이번 호는 논문 대신 표준 문서를 읽습니다. 표준은 논문보다 늦고 제품보다 빠른, 업계가 방향에 합의했다는 증거입니다.</div>
+
+    <article class="card paper-card reveal">
+      <h3>HBM 다음은 HBF — 용량의 병목을 낸드로 푸는 첫 규격</h3>
+      <div class="takeaway">◆ 비싼 D램으로 쌓던 용량을, 싼 낸드로 쌓아 보겠다는 선언</div>
+      <p class="facts">SK하이닉스와 샌디스크가 고대역폭 플래시(HBF, High Bandwidth Flash)의 첫 표준 규격을 공개했다(2026년 8월, FMS·OCP). 낸드 다이를 8단과 16단으로 쌓는 두 가지 구성으로 최대 512GB를 정의하고, 대역폭은 세 등급으로 나눠 약 0.4TB/s에서 3.0TB/s까지 규정했다. 프로세서와의 연결은 개방형 칩렛 규격인 UCIe를 채택해 GPU와 CPU 양쪽에 붙일 수 있게 했다. 표준에는 전기적 특성과 함께 적층 공정의 신뢰성·패키징 지침, 소프트웨어 사용 지침까지 포함됐다. 삼성전자와 마이크론은 아직 참여하지 않고 관망하는 것으로 알려졌다(보도).</p>
+
+      <div class="pick">
+        <div class="who">왜 지금인가</div>
+        <h4>AI 메모리의 병목이 대역폭에서 용량으로 옮겨가고 있다</h4>
+        <p>HBM은 대역폭 문제를 풀었지만 용량은 여전히 비싸다. D램 다이를 쌓아 올리는 방식이라 GB당 원가가 높고, 그 원가가 그대로 리드타임 52주(헤드라인 2)의 원인이기도 하다. HBF는 GB당 원가가 훨씬 낮은 낸드를 쌓아 용량을 확보하되, SSD보다 훨씬 높은 대역폭을 내겠다는 구상이다. 모델 파라미터가 계속 커지는 한 이 방향의 수요는 구조적이다.</p>
+      </div>
+
+      <div class="pick">
+        <div class="who">공정의 관점</div>
+        <h4>낸드를 HBM처럼 쌓는다는 것의 난이도</h4>
+        <p>낸드는 D램보다 다이가 크고 두꺼우며 쓰기 내구성(P/E 사이클)이 낮다. 이걸 16단으로 쌓아 프로세서 옆에 붙이면 열과 휨, 그리고 수명 관리가 한꺼번에 문제가 된다. 표준 문서에 적층 신뢰성과 패키징 지침이 함께 들어간 이유가 여기에 있다 — 규격을 정하는 단계부터 이미 공정 문제로 시작한다는 뜻이다.</p>
+      </div>
+
+      <div class="callout biz" style="margin-top:18px"><span class="lab">이것이 의미하는 것</span>타임라인은 보수적으로 읽어야 한다. 표준 공개는 양산이 아니라 <b>합의의 시작</b>이고, 삼성과 마이크론이 아직 합류하지 않은 규격은 아직 산업 표준이 아니다. 통상 표준 공개에서 상용 제품까지는 2~4년을 본다. 다만 한국 관점에서 주목할 점이 있다. HBM에서는 한국이 D램 강자여서 이겼지만, HBF는 낸드 게임이다 — 낸드 시장의 경쟁 구도는 D램과 다르고, 샌디스크·키옥시아 같은 플레이어가 전면에 선다. 13호에서 본 HBM 점유율 재편(50% 대 33%)이 세대 전환마다 일어난다면, HBF는 <b>세대가 아니라 제품군 자체가 바뀌는 전환</b>이다. 국내 낸드 사업의 위치가 이 규격 경쟁에서 정해진다. <i>(필자 해석)</i></div>
+      <div class="src">출처: <a href="https://biz.heraldcorp.com/article/10829955" target="_blank" rel="noopener">헤럴드경제 — SK하이닉스·샌디스크 HBF 첫 표준 규격 공개</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= 공정 한 컷 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">공정 한 컷</div>
+    <div class="sec-desc">전직 팹 엔지니어의 시선으로, 매호 용어 하나를 현장의 언어로 풉니다.</div>
+
+    <div class="fabnote reveal">
+      <img class="fn-img" src="img/fab-14.jpg" alt="팹 천장의 OHT 반송 레일을 올려다본 장면. 웨이퍼 운반함이 레일을 따라 줄지어 매달린 채 원근으로 끝없이 이어지고, 아래 장비 베이의 주황 상태등이 어둠 속에 늘어서 있다. (AI 생성 이미지)">
+      <div class="fn-lab">FAB NOTE · 14호</div>
+      <h3>리드타임 52주 — 주방은 이미 꽉 찼고, 메뉴를 바꾸는 데만 두 달이 든다</h3>
+      <p>"납기가 1년"이라는 말을 들으면 공장이 게으른 것 같지만, 팹 안에서는 전혀 다른 그림이다. 웨이퍼 한 장이 투입돼 완성품으로 나오는 데 걸리는 시간을 TAT(turn-around time)라고 부른다. D램은 레이어가 수백 단계에 걸쳐 쌓이고, 같은 장비를 여러 레이어가 돌아가며 쓰기 때문에 웨이퍼는 라인 안에서 계속 줄을 선다. 순수 가공 시간만 따지면 짧은데, 대기 시간을 포함한 실제 TAT는 <b>두세 달</b>이 보통이다. 즉 오늘 투입을 늘려도 결과는 분기 뒤에 나온다.<br><br>여기에 두 번째 벽이 있다. 캐파를 HBM에서 범용 D램으로, 혹은 그 반대로 돌리는 일은 스위치가 아니다. 제품이 바뀌면 레티클(노광용 마스크)이 바뀌고, 레시피가 바뀌고, 장비 세팅이 바뀐다. 바꾼 뒤에는 첫 로트가 규격대로 나오는지 확인하는 과정이 다시 붙는다. 라인 하나를 돌리는 데 몇 주에서 몇 달, 그리고 그동안의 생산은 사실상 멈춘다. 그래서 회사는 함부로 되돌리지 않는다 — <b>비가역에 가까운 결정</b>이기 때문이다.<br><br>여기에 세 번째가 겹친다. 새 캐파를 지으려면 팹을 지어야 하고, 팹은 전력과 용수와 사람을 요구한다(K-레이더 참조). 결국 52주라는 숫자는 "주문이 밀렸다"가 아니라 <b>"이 산업의 시간 단위가 원래 이렇다"</b>는 고백에 가깝다. 식당으로 치면 손님이 몰린 게 아니라, 주방이 이미 더 비싼 코스 요리로 꽉 찼고 메뉴판을 바꾸는 데만 두 달이 드는 상황이다. AI 수요가 몇 달 만에 뒤집힌다 해도 팹은 그 속도로 따라가지 못한다. 호황기에 공급이 안 늘어나는 이유와, 불황기에 감산이 늦는 이유는 정확히 같다.</p>
+      <div class="fn-tail">— 이 코너는 필자의 공정 경험에 기반한 개념 해설로, 특정 기업의 현행 공정 세부와 다를 수 있습니다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 이번 주 지표 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">이번 주 지표</div>
+    <div class="sec-desc">시장의 온도를 숫자 세 개로.</div>
+    <div class="metrics reveal">
+      <div class="metric">
+        <div class="m-lab">3분기 영업이익 (컨센서스)</div>
+        <div class="m-val up">190조 원</div>
+        <div class="m-sub">삼성 111.4조 + SK하이닉스 78.1조 — 확정치 아님 (와이즈리포트, 보도)</div>
+      </div>
+      <div class="metric">
+        <div class="m-lab">서버 DDR5 리드타임</div>
+        <div class="m-val">52주</div>
+        <div class="m-sub">정상 6주 대비 8배 이상 (KB증권, 9월 기준, 보도)</div>
+      </div>
+      <div class="metric">
+        <div class="m-lab">텅스텐 APT 가격</div>
+        <div class="m-val up">$2,950/t</div>
+        <div class="m-sub">2025년 2월 $342.50 → 9/18 기준, 8배 이상 (패스트마켓츠)</div>
+      </div>
+    </div>
+    <div class="metric-note">※ 자체 시계열 14주차. 마이크론 회계 4분기 실적(9/30)과 9월 수출 통계(10/1)는 이번 호 발행일 이후 일정이라 또 한 번 다음 호로 넘깁니다 — 13호에 이어 두 번째 이월이며, 월요일 발행과 월말 이벤트가 어긋나는 구조 때문입니다. 다음 호에서 두 건을 함께 채점합니다.</div>
+  </div>
+</section>
+
+<!-- ================= 캘린더 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">이번 주 캘린더</div>
+    <div class="sec-desc">다음 호에서 다루게 될 일정들.</div>
+    <ul class="cal reveal">
+      <li><span class="d">9/28 (월)</span><span>용인 무순위 당첨자 발표 — 126세대(13호)가 채워졌는지 확인, 결과는 다음 호에서 회수</span></li>
+      <li><span class="d hot">9/30 (수)</span><span>마이크론 회계 4분기 실적(미 장 마감 후) — 7호 가이던스 약 500억 달러와 11호 HBM 증산 계획의 채점</span></li>
+      <li><span class="d hot">10/1 (목)</span><span>9월 수출 통계 — 반도체 4개월 연속 400억 달러·비중 50% 돌파 여부 (11호 후속)</span></li>
+      <li><span class="d">10/1 (목)</span><span>용인 무순위 정당계약</span></li>
+      <li><span class="d hot">10월 초</span><span>삼성전자 3분기 잠정실적 — 분기 영업이익 100조 돌파 여부 확인 (헤드라인 1 채점)</span></li>
+      <li><span class="d">11월</span><span>IEDM 2026 프로그램 공개 — 12호 소재 교체 지도의 갱신판 예약</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 한 줄 동향 ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-title">한 줄 동향</div>
+    <div class="sec-desc">나머지 신호들, 한 줄씩만.</div>
+    <ul class="ticker reveal">
+      <li><b>HBM</b>2026년 글로벌 HBM 시장 매출 546억 달러(약 74.6조 원), 전년 대비 +58% 전망 — SK하이닉스 추산 (보도).</li>
+      <li><b>수급</b>씨티 전망 비트 수요 증가율 2027년 62%·2028년 69% vs D램 공급 증가율 19%·22% — 공급 제약 장기화 (보도).</li>
+      <li><b>메모리</b>립부 탄 인텔 CEO "내년 메모리 공급 부족과 가격 폭등 심화" (AI 인프라 서밋, 보도).</li>
+      <li><b>정책</b>미 의회, 중국산 광트랜시버 퇴출 추진 — 한국 기업 반사이익 가능성 (보도).</li>
+      <li><b>전력</b>텍사스 전력망, 474GW 규모 허수 접속 신청에 신규 접속 제한 — 빅테크는 현금 직투자로 우회 (보도). 용인의 전력 숙제(4·5호)와 같은 문제의 미국판.</li>
+      <li><b>거시</b>호르무즈 협상 낙관론에 국제유가 하락, 뉴욕증시 3대 지수 상승(9/25 현지) — 13호가 지목한 '유가 안정' 경로가 이어지는 중.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 콜로폰 ================= -->
+<footer class="colophon">
+  <div class="wrap">
+    <h4>ABOUT THIS BRIEF</h4>
+    <p>「공정한 시선」은 반도체 공정 개발 현장을 거친 필자가 발행하는 주간 브리핑입니다. 글로벌 반도체 뉴스를 나열하는 대신 공정·소재의 눈(工程)으로 '왜'를 해설하고, 기업의 판단과 정책의 판단에 각각 필요한 시사점으로 번역하며(公正), 학회·논문·표준에서 뉴스보다 앞선 신호를 발굴합니다. (보도)·(추정) 표기 수치는 2차 보도 기반으로 원 자료 확인 전이며, '필자 해석'은 공개 정보에 대한 개인 견해입니다. 이번 호의 3분기 실적 수치는 모두 증권가 추정치로 확정 실적이 아니며, 10월 잠정실적 발표 때 이 자리에서 채점합니다. 본 브리핑은 투자 권유가 아닙니다.</p>
+
+    <div class="next">
+      <div class="nx-lab">NEXT ISSUE — 다음 주 예고</div>
+      <div class="nx-title">채점의 주간 — 마이크론, 수출, 그리고 100조</div>
+      <p>9월 30일 마이크론 실적, 10월 1일 수출 통계, 10월 초 삼성 잠정실적. 미뤄둔 채점표 세 장을 한 번에 펼칩니다.</p>
+    </div>
+
+    <details class="srcbox">
+      <summary>전체 출처 목록 펼치기 (6건)</summary>
+      <ul>
+        <li><a href="https://www.fnnews.com/news/202609280631163675" target="_blank" rel="noopener">'삼성 111조·SK하닉 78조' 3Q 최대 실적 전망 — 뉴스1·파이낸셜뉴스(9.28)</a></li>
+        <li><a href="https://www.g-enews.com/article/Global-Biz/2026/09/2026092523002132780c8c1c064d_1" target="_blank" rel="noopener">"中 텅스텐 독점 깬다" 엘멧, 베트남 마산 지분 인수 — 글로벌이코노믹(9.26)</a></li>
+        <li><a href="https://www.g-enews.com/article/Global-Biz/2026/09/202609251658393730fbbec65dfb_1" target="_blank" rel="noopener">HBM 점유율 50%·시장 546억 달러 전망 — 글로벌이코노믹(9.25)</a></li>
+        <li><a href="https://biz.heraldcorp.com/article/10829955" target="_blank" rel="noopener">SK하이닉스·샌디스크 HBF 첫 표준 규격 공개 — 헤럴드경제</a></li>
+        <li><a href="https://www.g-enews.com/article/Global-Biz/2026/09/202609220549544379fbbec65dfb_1" target="_blank" rel="noopener">삼성, HBM4 유리기판 캐리어 조달 2.5배 — 글로벌이코노믹(9.22)</a></li>
+        <li><a href="https://www.g-enews.com/article/Global-Biz/2026/09/2026092710535716522bd56fbc3c_1" target="_blank" rel="noopener">"사람이 없다" 삼성 2나노 양산 위해 美 현지 채용 — 글로벌이코노믹(9.27)</a></li>
+      </ul>
+    </details>
+
+    <div class="foot">
+      <span>공정한 시선 14호</span>
+      <span>발행인: (이름) · 구독: (뉴스레터 주소)</span>
+      <span>발행 2026. 9. 28. · 글로벌 신호 확인 2026년 9월 28일 자</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const gauge = document.getElementById('gauge');
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const p = h.scrollTop / (h.scrollHeight - h.clientHeight);
+  gauge.style.width = (p * 100).toFixed(2) + '%';
+}, {passive:true});
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('reveal-in'); io.unobserve(e.target); } });
+}, {threshold: 0.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
